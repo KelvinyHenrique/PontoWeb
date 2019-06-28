@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Bahnschrift Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Bahnschrift Regular'), url('../fonts/bahnschrift.woff') format('woff');
+    }
+
+body {
+    background-image: url('../imagens/background-02.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+::-webkit-input-placeholder {
+    font-size: 44px;
+    font-family: 'Bahnschrift Regular';
+}

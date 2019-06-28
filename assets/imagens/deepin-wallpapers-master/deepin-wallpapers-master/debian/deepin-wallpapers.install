@@ -1,0 +1,3 @@
+deepin /usr/share/wallpapers
+deepin-private/* /usr/share/wallpapers/deepin
+image-blur /var/cache

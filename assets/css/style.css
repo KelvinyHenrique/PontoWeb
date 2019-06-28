@@ -1,0 +1,543 @@
+@font-face {
+    font-family: 'Bahnschrift Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Bahnschrift Regular'), url('../fonts/bahnschrift.woff') format('woff');
+    }
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Bahnschrift Regular';
+}
+
+
+.conteiner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-body {
+    width: 100%;
+    height: 725px;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    flex-direction: column;
+    top:50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.body-inicio {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.botao-box {
+    background-color: #dfffff00;
+    border: none;
+}
+
+.box-func a {
+    color: #ffffff;
+    font-size: 50px;
+    font-family: 'Bahnschrift Regular';
+    text-decoration: none;
+}
+
+.box-ponto a {
+    color: #ffffff;
+    font-size: 50px;
+    font-family: 'Bahnschrift Regular';
+    text-decoration: none;
+}
+
+.body-inicio button:focus {
+    /*Para não ficar linhas quando o botão foi focado*/
+    outline: thin dotted;
+    outline: 0px auto -webkit-focus-ring-color;
+    outline-offset: 0px; 
+}
+
+.box-func {
+    margin-right: 30px;
+    width: 630px;
+    height: 391px;
+    background-color: rgba(0, 106, 14, 0.514);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+}
+
+.box-ponto {
+    margin-left: 30px;
+    width:630px;
+    height: 391px;
+    background-color: rgba(0, 41, 138, 0.486);
+    opacity: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+}
+
+.box-admin {
+    width: 692px;;
+    height: 83px;
+    background-color:rgba(255, 29, 37, 0.521);
+    opacity: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+}
+
+.box-admin a {
+    color: #ffffff;
+    font-size: 50px;
+    font-family: 'Bahnschrift Regular';
+    text-decoration: none;
+}
+
+
+/* Stilo Intervalos.html */
+
+.intervalo-box {
+    /* width: 25%;
+    height: 900px;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: #ffffff;
+    font-size: 70px;
+    font-family: 'Bahnschrift Regular'; */
+    background-repeat: no-repeat;
+    background-size: 260px;
+    background-position-x: 82px;
+    background-position-y: 450px;
+    width: 25%;
+    height: 900px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    text-orientation: sideways-right;
+    font-family: 'Bahnschrift Regular';
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    padding-top: 180px;
+    margin: 30px;
+    border: none;
+}
+
+#entrada {
+    background-color: #E6CC9F;
+    background-image: url('../imagens/icons/door.svg');
+}
+
+#pausa {
+    background-color: #FFB600;
+    background-image: url('../imagens/icons/dinner.svg');
+}
+
+#retorno {
+    background-color: #AEA78E;
+    background-image: url('../imagens/icons/pratovazio.png');
+}
+
+#saida {
+    background-color: #FA2742;
+    background-image: url('../imagens/icons/saida.png');
+}
+
+.body-intervalo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.intervalo-icon img{
+    width: 260px;
+    height: 260px;
+    margin: 10px;
+}
+
+
+/* Body Login */
+
+.login-body {
+    width:100%;
+	height: 100%;
+  top:50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-background {
+    width: 30%;
+    height: 100%;
+    background-color: rgba(25, 0, 95, 0.534);
+}
+
+.login-form {
+    width: 70%;
+    height: 100%;
+    background-color: rgba(25, 0, 95, 0.966);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box-form input{
+    width: 600px;
+    height: 40px;
+    border-radius: 50px;
+    font-size: 40pt;
+    padding: 20px;
+    margin: 20px;
+}
+
+.alinhamento-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.enviar-form input{
+    width: 300px;
+    height: 60px;
+    border-radius: 7px;
+    margin-top: 40px;
+}
+
+
+.box-form input:focus {
+    /*Para não ficar linhas quando o botão foi focado*/
+    outline: thin dotted;
+    outline: 0px auto -webkit-focus-ring-color;
+    outline-offset: 0px; 
+}
+
+.title-login P{
+    font-size: 50px;
+    color: #ffffff;
+    font-family: 'Bahnschrift Regular';
+    margin-bottom: 60px;
+}
+
+
+/* Área de Administração */
+
+
+.icon img{
+    width: 290px;
+    height: 210px;
+    margin: 10px;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-02-admin {
+     display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 470px;
+}
+
+.box-02-admin button {
+    width: 25%;
+    height: 90%;
+    margin: 20px;
+    color: #ffffff;
+    font-size: 44px;
+    font-family: 'Bahnschrift Regular';
+    border: none;
+    box-shadow: 2px 2px 47px 14px rgba(0, 0, 0, 0.664);
+}
+
+.funcionarios {
+    background-color: #005574;
+}
+
+.horas {
+    background-color: #006A56;
+}
+
+.empresas {
+    background-color: #4F00C9;
+}
+
+.administradores {
+    background-color: #00266A;
+}
+
+.backup {
+    background-color: #1D6F3A;
+}
+
+.cadastro {
+    background-color: #571C5C;
+}
+
+.turnos {
+    background-color: #C95937;
+}
+
+.sair {
+    background-color: #BC1D26;
+}
+
+
+/* Cadastro de Usuários */
+.box-form-01 {
+    width: 100%;
+    top:50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.box-11-form {
+    width: 100%;
+}
+
+.box-cadastro {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-cadastro .telefone {
+    width: 63.5%;
+}
+
+.box-cadastro input {
+    width: 30%;
+    height: 72px;
+    margin-bottom: 50px;
+    font-size: 30px;
+    margin-left: 27px;
+    margin-right: 27px;
+}
+
+::-webkit-input-placeholder {
+    color: #000000;
+    font-size: 30px;
+    font-family: 'Bahnschrift Regular';
+    text-align: left;
+    
+}
+
+.upload-arquivos img {
+    width: 80px;
+}
+
+.upload-arquivos {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.upload-box-icons {
+    margin-left: 30px;
+    display: flex;
+}
+.upload-box-icons button {
+    width: 300px;
+    height: 104px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    font-size: 30px;
+    font-family: 'Bahnschrift Regular';
+    border: none;
+
+}
+
+.botaoimagem {
+    background-color: #56007F;
+    margin-right: 50px;
+}
+
+.botaodigital {
+    background-color: #008A55;
+}
+
+.titulo-cadastro {
+    width: 745px;
+    height: 75px;
+    border-radius: 35px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-family: 'Bahnschrift Regular';
+    margin-bottom: 130px;
+}
+
+.checkboxcadastro{
+    font-size: 40px;
+    font-family: 'Bahnschrift Regular';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 734px;
+    height: 50px;
+    border-radius: 35px;
+    background-color: #9F4300;
+    color: #ffffff;
+    padding: 20px;
+    margin-right: 30px;
+}
+
+.checkboxcadastro input {
+    width: 20px;
+}
+
+.botaocadastrar {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botaocadastrar input {
+    width: 415px;
+    height: 88px;
+    border-radius: 44px;
+    background-color: #B4000F;
+    border: none;
+    font-size: 40px;
+    color: #ffffff;
+    font-family: 'Bahnschrift Regular';
+    outline: thin dotted;
+    outline: 0px auto -webkit-focus-ring-color;
+    outline-offset: 0px;
+    margin-top: 150px;
+}
+
+
+/* Pagina de Registro de Ponto */
+
+.body-contagem-ponto {
+    width: 100%;
+    height: 100%;
+    top:50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-color: #350800;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo-sucesso {
+    font-size: 25px;
+    color: #ffffff;
+}
+
+
+.box-contagem-ponto {
+    display: flex;
+
+}
+
+.box-data {
+    width: 234px;
+    height: 270px;
+    background-color: #ffffff;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-between;
+    font-size: 70px;
+    padding: 30px;
+    font-weight: bold;
+}
+
+.box-inferior-registro {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botoes { 
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Bahnschrift Regular';
+    font-size: 40px;
+    color: #FFFFFF;
+}
+
+.botoes.voltar {
+    background-color: #5F0025;
+    margin-right: 20px;
+    padding: 25px 180px 25px 180px;
+}
+
+.botoes.sair { 
+    padding: 25px 180px 25px 180px;
+    background-color: #3E008A;
+    margin-left: 20px;
+}
+
+/* Teste Formulario Entrada */
+
+.form-intervalos {
+    width: 100%;
+    height: 100%;
+}
+
+#entrada-input {
+    background-image: url('../imagens/icons/door.svg');
+    background-repeat: no-repeat;
+    background-size: 260px;
+    background-position-x: 40px;
+    background-position-y: 450px;
+    width: 25%;
+    height: 900px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    text-orientation: sideways-right;
+    font-family: 'Bahnschrift Regular';
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    padding-top: 180px;
+}

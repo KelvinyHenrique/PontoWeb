@@ -67,7 +67,8 @@ if(isset($_SESSION['ponto']) && empty($_SESSION['ponto']) == false){
             header("Location: ../html/sucesso.php");
             session_destroy();
         } else //SE NÃO FOI SETADO MAS ESTÁ PREENCHIDO ENTÃO PASSAR PARA A LiNHA DE BAIXO
-        {
+        {   
+            session_destroy();
             echo "Você já bateu o ponto".$horaatual;
             header("Location: ../html/erroponto.php");
             exit;

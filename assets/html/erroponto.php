@@ -77,11 +77,11 @@ echo $horaatual;
 
                 <div class="box-inferior-registro">
                     <div>
-                       <a class="botoes voltar"  href="">Sair</a>
+                       <a class="botoes voltar"  href="../../index.html">Sair</a>
                     </div>
 
                     <div>
-                        <a class="botoes sair" href="">Menu</a>
+                        <a class="botoes sair" href="../../index.html">Menu</a>
                     </div>
                 </div>
 

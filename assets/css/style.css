@@ -110,69 +110,73 @@ body{
 
 /* Stilo Intervalos.html */
 
+.bodyintervalos {
+
+    background-color: #052138;
+}
+
+.form-intervalos {
+    widows: 100%;
+    height: 100%;
+    top:50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+}
+
+
 .intervalo-box {
-    /* width: 25%;
-    height: 900px;
-    margin: 30px;
+    width: 24%;
+    height: 95%;
+    margin-right: 15px;
+    margin-left: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     color: #ffffff;
-    font-size: 70px;
-    font-family: 'Bahnschrift Regular'; */
-    background-repeat: no-repeat;
-    background-size: 260px;
-    background-position-x: 82px;
-    background-position-y: 450px;
-    width: 25%;
-    height: 900px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-bottom: 50px;
-    text-orientation: sideways-right;
     font-family: 'Bahnschrift Regular';
     font-size: 40px;
-    color: rgb(255, 255, 255);
-    padding-top: 180px;
-    margin: 30px;
     border: none;
+    border-radius: 15px;
+    box-shadow: 2px 2px 47px 14px rgba(0, 0, 0, 0.664);
 }
 
 #entrada {
     background-color: #E6CC9F;
-    background-image: url('../imagens/icons/door.svg');
 }
 
 #pausa {
     background-color: #FFB600;
-    background-image: url('../imagens/icons/dinner.svg');
+   
 }
 
 #retorno {
     background-color: #AEA78E;
-    background-image: url('../imagens/icons/pratovazio.png');
+   
 }
 
 #saida {
     background-color: #FA2742;
-    background-image: url('../imagens/icons/saida.png');
 }
 
 .body-intervalo {
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
 }
+.intervalo-icon {
+    width: 100%;
+    height: 35%;
+}
 
 .intervalo-icon img{
-    width: 260px;
-    height: 260px;
-    margin: 10px;
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -205,7 +209,6 @@ body{
     align-items: center;
 }
 .box-form input{
-    width: 600px;
     height: 40px;
     border-radius: 50px;
     font-size: 40pt;
@@ -756,10 +759,15 @@ body{
     justify-content: space-around;
 }
 
-.iconindex img{
-    width: 290px;
-    height: 270px;
+.iconindex i{
+    width: 100%;
+    height: 35%;
     margin: 10px;
+}
+
+.iconindex img {
+    width: 100%;
+    height: 100%;
 }
 
 .funcionarios {

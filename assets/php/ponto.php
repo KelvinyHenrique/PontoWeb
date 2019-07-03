@@ -7,10 +7,9 @@ date_default_timezone_set('America/Sao_Paulo');
 
 /*Pega valor do intervalo selecionado */
 $intervalo_selecinado='';
-if(isset($_POST['getValue'])){
-$intervalo_selecinado = $_POST['getValue'];
+if(isset($_POST['btnvalue'])){
+$intervalo_selecinado = $_POST['btnvalue'];
 }
-echo $intervalo_selecinado;
 
 //PEGA DATA ATUAL 
 

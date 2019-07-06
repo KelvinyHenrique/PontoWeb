@@ -54,9 +54,10 @@ if(isset($_SESSION['admin']) && empty($_SESSION['admin']) == false){
            ?>
                 <div class="box-funcionarios-info">
                    
-                   
-                   
-                    <a href="perfil.html">
+                   <form action="funcionarios.html" method="post">
+
+                 <button type="submit" value="<?php $lista['nome'];?>">
+                            <a href="perfil.html">
                         <div class="circulo-body">
                             <?php  if ($lista['status'] == 2) {
                             echo '<div class="circulo-desativados"></div>';
@@ -70,6 +71,10 @@ if(isset($_SESSION['admin']) && empty($_SESSION['admin']) == false){
                         <div class="setor-funcionario"><?php echo $lista['funcao']; ?></div>
                         <div class="loja-funcionario"><?php echo $lista['empresa']; ?></div>
                     </a>
+                   </button>
+                   </form>
+                  
+               
 
 
                     

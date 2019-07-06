@@ -3,3 +3,80 @@ body {
     background-size: cover;
     
 }
+
+@media (min-width: 768px) {
+    .box-01-admin {
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+    
+}   
+
+
+
+@media (min-width: 768px)  and (max-width: 1440px){
+    .icon img{
+        width: 143px;
+        height: 143px;
+        margin-bottom: 15px;
+    }
+
+    .box-02-admin button {
+        width: 23%;
+        height: 90%;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 27px;
+        color: #ffffff;
+        font-family: 'Bahnschrift Regular';
+        border: none;
+        box-shadow: 2px 2px 47px 14px rgba(0, 0, 0, 0.664);
+    }
+
+}
+
+@media (max-width:767px) {
+    .box-01-admin {
+        width: 100%;
+    }
+
+    .alinhamento-admin {
+        width: 100%;
+    }
+    .icon img{
+        width: 190px;
+        height: 190px;
+    }
+    
+    .box-02-admin button {
+        width: 90%;
+        height: 400px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: #ffffff;
+        font-size: 40px;
+        font-family: 'Bahnschrift Regular';
+        border: none;
+        box-shadow: 2px 2px 47px 14px rgba(0, 0, 0, 0.664);
+    }
+    
+    .icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .box-02-admin {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+} 

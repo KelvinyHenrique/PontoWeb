@@ -1,0 +1,9 @@
+body {
+    background-image: url('../imagens/background-05.jpg');
+    background-size: cover;
+}
+
+img {
+    width: 167px;
+    height: 231px;
+}

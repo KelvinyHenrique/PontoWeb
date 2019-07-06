@@ -14,8 +14,8 @@ if(isset($_POST['usuario']) && empty($_POST['usuario']) == false){
     if($sql->rowCount() > 0){
 
             $sql = $sql->fetch();
-            $_SESSION['ponto'] = $sql['id'];
-            header("Location: ../html/intervalos.html");
+            $_SESSION['admin'] = $sql['id'];
+            header("Location: ../html/admin.html");
     } else {
       header("Location: ../html/login.html");
     } 

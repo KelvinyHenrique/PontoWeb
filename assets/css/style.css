@@ -248,11 +248,21 @@ body{
 
 /* Área de Administração */
 
-
 .icon img{
     width: 290px;
     height: 210px;
     margin: 10px;
+}
+
+.box-02-admin button {
+    width: 20%;
+    height: 90%;
+    margin: 20px;
+    color: #ffffff;
+    font-size: 44px;
+    font-family: 'Bahnschrift Regular';
+    border: none;
+    box-shadow: 2px 2px 47px 14px rgba(0, 0, 0, 0.664);
 }
 
 .icon {
@@ -263,24 +273,15 @@ body{
 }
 
 .box-02-admin {
-     display: flex;
+    display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    height: 470px;
+    height: 50%;
 }
 
-.box-02-admin button {
-    width: 25%;
-    height: 90%;
-    margin: 20px;
-    color: #ffffff;
-    font-size: 44px;
-    font-family: 'Bahnschrift Regular';
-    border: none;
-    box-shadow: 2px 2px 47px 14px rgba(0, 0, 0, 0.664);
-}
-
-.funcionarios {
+.funcionariosadmin {
     background-color: #005574;
 }
 
@@ -714,70 +715,104 @@ body{
     align-items: center;
     justify-content: center;
     width: 100%;
+    height: 100%;
     text-decoration: none;
     color: #FFFFFF;
 }
 
+.lista-funcionarios-conteiner button {
+    width: 100%;
+    background-color: #00000000;
+    height: 100%;
+    border-radius: 20px;
+    border:none;
+}
+
 
 /* INDEX BETA ESTILO */
-
-.box-01-index {
-    width: 100%;
-    height: 100%;
-    top:50%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-}
-
-.box-02-index {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.form-index-beta {
-    width: 100%;
-    height: 100%;
-}
-
-.box-01-index button {
-    width: 25%;
-    height: 90%;
-    margin: 20px;
-    color: #ffffff;
-    font-size: 44px;
-    font-family: 'Bahnschrift Regular';
-    border: none;
-    border-radius: 17px;
-    box-shadow: 2px 2px 47px 14px rgba(0, 0, 0, 0.664);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.iconindex i{
-    width: 100%;
-    height: 35%;
-    margin: 10px;
-}
-
 .iconindex img {
     width: 100%;
     height: 100%;
 }
 
 .funcionarios {
-    background-color: #005574;
+    background-color: #179fd1;
 }
 
 .baterponto {
-    background-color: #E71D36;
+    background-color: rgb(224, 59, 79);
 }
 
 .administracao {
-    background-color: #E26E3F;
+    background-color: rgb(226, 113, 68);
+}
+
+.funcionarios, .baterponto, .administracao{
+    transition: 0.3s ease-in;
+}¨
+
+
+
+/* Registro de Ponto */
+
+.ponto-imagem-box {
+    width: 300px;
+    height: 300px;
+}
+
+.ponto-imagem {
+    background-color: #008A55;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.ponto-title {
+    font-size: 30px;
+}
+
+.conteiner-ponto {
+    top:50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    color: #FFFFFF;
+}
+
+.input-ponto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#password-ponto{
+    width: 400px;
+    height: 60px;
+    font-size: 60px;
+    color: #FFFFFF;
+    background-color: #0000005e;
+    border: none;
+}
+
+.imgponto img{
+    width: 48px;
+    height: 48px;
+}
+
+.imgponto {
+    width: 60px;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(27, 158, 143);
+    border: none;
 }

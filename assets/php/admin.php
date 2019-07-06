@@ -1,5 +1,5 @@
 <?php
-/*Pega valor do botãp selecionado */
+/*Pega valor do botão selecionado */
 $valorbtn='';
 if(isset($_POST['btnvalue'])){
 $valorbtn = $_POST['btnvalue'];

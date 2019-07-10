@@ -81,7 +81,7 @@ echo $horaatual;
                     </div>
 
                     <div>
-                        <a class="botoes sair" href="../html/login.html">Voltar</a>
+                        <a class="botoes sair" href="../html/ponto.html">Voltar</a>
                     </div>
                 </div>
 

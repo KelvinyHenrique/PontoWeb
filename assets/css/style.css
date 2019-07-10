@@ -651,10 +651,20 @@ body{
     margin-left: 10px;
 }
 
-.circulo-body {
-    display: flex;
+.alinhamento-func {
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.circulo-body {
+    width: 100%;
+    display: flex;
     justify-content: flex-end;
+    align-items: center;
     margin-top: 5px;
 }
 .icon-advanced-func {
@@ -709,25 +719,26 @@ body{
     margin-bottom: 20px;
 }
 
-.lista-funcionarios-conteiner a{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.form-bodyfuncionarios{
     width: 100%;
     height: 100%;
-    text-decoration: none;
-    color: #FFFFFF;
+    padding: 0;
+    margin: 0;
 }
 
 .lista-funcionarios-conteiner button {
     width: 100%;
     background-color: #00000000;
+    color: #FFFFFF;
     height: 100%;
     border-radius: 20px;
     border:none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bahnschrift Regular';
+    font-size: 30px;
 }
-
 
 /* INDEX BETA ESTILO */
 .iconindex img {
@@ -761,9 +772,9 @@ body{
 }
 
 .ponto-imagem {
-    background-color: #008A55;
-    width: 250px;
-    height: 250px;
+    background-color: #ef4848;
+    width: 300px;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -773,6 +784,7 @@ body{
 .ponto-title {
     font-size: 30px;
 }
+
 
 .conteiner-ponto {
     top:50%;
@@ -786,6 +798,15 @@ body{
     height: 100%;
     flex-direction: column;
     color: #FFFFFF;
+}
+
+.alinhamento-bater-ponto {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
 }
 
 .input-ponto {
@@ -803,16 +824,61 @@ body{
     border: none;
 }
 
-.imgponto img{
-    width: 48px;
-    height: 48px;
+.ponto-imagem img{
+    width: 200px;
+    height: 200px;
 }
 
 .imgponto {
     width: 60px;
-    height: 50px;
+    height: 100%;
     padding: 0;
     margin: 0;
-    background-color: rgb(27, 158, 143);
+    background-color: #ef4848;
     border: none;
+}
+
+/* PAGINA DE PERFIL */
+
+.perfil-funcionario {
+    top:50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    background-color: #008A55;
+}
+
+.box-perfil-pessoal {
+    width: 100%;
+    height: 50%;
+    background-color: tomato;
+    display: flex;
+    align-items: center;
+}
+
+.widgets {
+    width: 100%;
+    height: 50%;
+    background-color: #005574;
+}
+
+.perfil-body {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #005574;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.perfil-body img {
+    width: 100px;
+    height: 100px;
 }

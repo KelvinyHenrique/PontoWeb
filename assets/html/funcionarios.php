@@ -51,13 +51,13 @@ if(isset($_SESSION['admin']) && empty($_SESSION['admin']) == false){
             </div>
             <div class="lista-funcionarios-conteiner">
                 <?php          foreach ($funcionarios = $sql->fetchAll() as $lista) {
+                    $linka = $lista['id'];
            ?>
                 <div class="box-funcionarios-info">
-                   
-                   
-                   
-                    <a href="perfil.html">
-                        <div class="circulo-body">
+                   <form  class="form-bodyfuncionarios" action="perfil.html" method="post">
+                       <button type="submit" name="funcionario" value="<?php echo $linka;?>">
+                        <div class="alinhamento-func">
+                             <div class="circulo-body">
                             <?php  if ($lista['status'] == 2) {
                             echo '<div class="circulo-desativados"></div>';
                         } else {
@@ -65,11 +65,18 @@ if(isset($_SESSION['admin']) && empty($_SESSION['admin']) == false){
                         } 
                         ?>
                         </div>
+
                         <div class="imagem-box-perfil"><img src="../imagens/icons/perfil/boy.svg" alt=""></div>
                         <div class="nome-funcionario"><?php echo $lista['nome']; ?></div>
                         <div class="setor-funcionario"><?php echo $lista['funcao']; ?></div>
                         <div class="loja-funcionario"><?php echo $lista['empresa']; ?></div>
-                    </a>
+                        </div>
+                      
+                       </button>
+                      
+                   </form>
+                   
+                
 
 
                     

@@ -6,11 +6,12 @@
 $nome = $_POST['nome'];
 $cpf = $_POST['cpf'];
 $nascimento = $_POST['nascimento'];
-$ctps = $_POST['ctps'];
+$usuario = $_POST['usuario'];
 $funcao = $_POST['funcao'];
 $senha = $_POST['senha'];
 $email = $_POST['email'];
 $telefone = $_POST['telefone'];
+$empresa = $_POST['empresa'];
 
 /* Faz a verificação se o usuario é administrador ou não */
 $_checkbox = $_POST['caixas'];
@@ -31,12 +32,12 @@ echo '<div>',$admin,'</div>';
 
 
 
-echo $nome,'<br/>',$cpf,'<br/>',$nascimento,'<br/>', $ctps,'<br/>', $funcao,'<br/>', $senha,'<br/>', $email,'<br/>', $telefone,'<br/>';
+echo $nome,'<br/>',$cpf,'<br/>',$nascimento,'<br/>', $usuario,'<br/>', $funcao,'<br/>', $senha,'<br/>', $email,'<br/>', $telefone,'<br/>';
 
 try {
     $conexao = new PDO('mysql:host=localhost;dbname=ponto', 'root');
     $conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "INSERT INTO funcionarios SET nome = '$nome', cpf = '$cpf', nascimento = '$nascimento', ctps = '$ctps', funcao = '$funcao', senha = '$senha', email = '$email', telefone = '$telefone', administrador = '$admin'";
+    $sql = "INSERT INTO funcionarios SET nome = '$nome', cpf = '$cpf', nascimento = '$nascimento', usuario = '$usuario', funcao = '$funcao', senha = '$senha', email = '$email', telefone = '$telefone', administrador = '$admin', empresa ='$empresa'";
     $sql= $conexao->query($sql);
 
 } catch (PDOExeption $e) {

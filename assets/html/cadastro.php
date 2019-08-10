@@ -25,13 +25,14 @@
                 </div>
 
                 <div class="box-cadastro">
-                    <input type="number" placeholder="CTPS" name="ctps" >
+                    <input type="text" placeholder="Usuario" name="usuario" >
                     <input type="text" placeholder="Função" name="funcao" required>
                     <input type="password" placeholder="Senha" name="senha" required>
                 </div>
 
                 <div class="box-cadastro">
                     <input type="email" placeholder="Email" name="email" required>
+                    <input type="text" placeholder="Empresa" name="empresa" required>
                     <input class="telefone" type="number" placeholder="Telefone" name="telefone">
                 </div>
                 <div class="upload-arquivos">

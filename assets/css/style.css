@@ -11,6 +11,15 @@ body{
     font-family: 'Bahnschrift Regular';
 }
 
+h3 {
+    margin: 0;
+    padding: 0;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+
 
 .conteiner {
     width: 100%;
@@ -840,6 +849,15 @@ body{
 
 /* PAGINA DE PERFIL */
 
+.topo-perfil {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
 .perfil-funcionario {
     top:50%;
     left: 50%;
@@ -851,34 +869,323 @@ body{
     width: 100%;
     height: 100%;
     flex-direction: column;
-    background-color: #008A55;
 }
 
 .box-perfil-pessoal {
     width: 100%;
     height: 50%;
-    background-color: tomato;
     display: flex;
     align-items: center;
+    flex-direction: row;
 }
 
 .widgets {
     width: 100%;
     height: 50%;
-    background-color: #005574;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.widgets-box {
+    width: 90%;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circulo-perfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #38b764;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 35px;
 }
 
 .perfil-body {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
-    background-color: #005574;
+    background-color: #b13e53;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .perfil-body img {
-    width: 100px;
-    height: 100px;
+    width: 170px;
+    height: 170px;
+}
+
+.box-info-perf {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.perfil-alinha {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+}
+
+.prev-infos {
+    width: 300px;
+    height: 200px;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.prev-infos h3 {
+    margin: 10px;
+}
+
+
+.box-perfil-dados {
+    width: 90%;
+    height: 90%;
+    border-radius: 15px;
+    background-color: #b13e53;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 30px;
+    color: #ffffff;
+    padding-left: 10px;
+}
+
+.box-perfil-dados p {
+    margin: 7px;
+}
+
+.widgets-01 {
+    width: 250px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.widgets-01 p {
+    margin: 16px;
+    color: rgb(0, 0, 0);
+    font-size: 35px;
+}
+
+.botaoeditar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botaoeditar button{
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #00000000;
+    border: 2px solid #38b764;
+    color: white;
+    font-size: 25px;
+}
+
+.botaoeditar button:hover {
+    background-color: #ffffff;
+    border: black;
+    color: black;
+}
+
+/* Banco de Horas */
+
+.bancodehoras {
+    width: 100%;
+    display: flex;
+}
+
+.divbodyhoras {
+    width: 95%;
+}
+
+.divlateral {
+    background-color: #008A55;
+    width: 5%;
+    height: 966px;
+    color: white;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divlateral p {
+    transform: rotate(-90deg);
+}
+.pesquisatopo {
+    width: 100%;
+    height: 80px;
+    background-color: #00266A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.pesquisatopo div {
+    margin: 10px;
+
+}
+
+.informacoeshoras {
+    width: 100%;
+    height: 500px;
+}
+
+.formulariobancodehoras {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.box2019-pesquisa {
+    display: flex;
+    flex-direction: row;
+}
+
+.infostopobar {
+    font-size: 20px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+}
+
+.infostopobar2 {
+    font-size: 20px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+}
+
+.infostopobar input {
+    width: 200px;
+    height: 30px;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.infostopobar2 input{
+    width: 700px;
+    height: 30px;
+    margin: 10px;
+    font-size: 30px;
+}
+
+.infostopobar select {
+    width: 150px;
+    height: 35px;
+    font-size: 20px;
+    padding-right:  5px;
+    padding-left: 5px;
+    margin: 10px;
+    
+}
+
+.botaopesquisatopo input{
+    width: 150px;
+    height: 45px;
+    padding: 10px;
+    border: none;
+    font-size: 20px;
+    color: #FFFFFF;
+    border-radius: 15px;
+    background-color: rgb(12, 209, 133);
+}
+
+.quadradoshoras {
+    width: 100%;
+    height: 500px;
+}
+
+.informacoeshoras {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.horasextras, .totalhoras, .totalfaltas, .totalatestados {
+    width: 350px;
+    height: 250px;
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 40px;
+    color: white;
+
+}
+
+.horasextras {
+    background-color: red;
+}
+
+.totalhoras {
+    background-color: #008A55;
+}
+
+.totalfaltas {
+    background-color: #005574;
+}
+
+.totalatestados {
+    background-color: #571C5C;
+}
+
+
+/* TABELA HORAS DADOS */
+
+.tabelabancohoras {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.tablehorasbody {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tablehorasbody td{
+    border-bottom: 2px solid rgb(255, 253, 253);
+    padding: 30px;
+}
+
+.tablehorasbody th {
+     border-bottom: 2px solid rgb(255, 253, 253);
+     padding-bottom: 13px;
+}
+
+table tr td{
+    margin: 0px;
+    padding: 0px;
+    border: none;
 }

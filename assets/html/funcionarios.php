@@ -1,13 +1,3 @@
-<?php
-session_start();
-require '../php/config.php';
-
-if(isset($_SESSION['admin']) && empty($_SESSION['admin']) == false){
-    $sql = $pdo->prepare("SELECT * FROM funcionarios");
-    $sql->execute();
-    if($sql->rowCount() > 0){
-        ?>
-
 <html>
 
 <head>
@@ -48,13 +38,22 @@ if(isset($_SESSION['admin']) && empty($_SESSION['admin']) == false){
             </div>
             <div class="conteiner">
                 <hr class="linha" />
+                <?php
+session_start();
+require '../php/config.php';
+
+if(isset($_SESSION['admin']) && empty($_SESSION['admin']) == false){
+    $sql = $pdo->prepare("SELECT * FROM funcionarios");
+    $sql->execute();
+    if($sql->rowCount() > 0){
+        ?>
             </div>
             <div class="lista-funcionarios-conteiner">
                 <?php          foreach ($funcionarios = $sql->fetchAll() as $lista) {
                     $linka = $lista['id'];
            ?>
                 <div class="box-funcionarios-info">
-                   <form  class="form-bodyfuncionarios" action="perfil.html" method="post">
+                   <form  class="form-bodyfuncionarios" action="perfil.php" method="post">
                        <button type="submit" name="funcionario" value="<?php echo $linka;?>">
                         <div class="alinhamento-func">
                              <div class="circulo-body">

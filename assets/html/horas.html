@@ -1,15 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Banco de Horas</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/tabelahoras.css">
 </head>
-<body>
+<!-- SISTEMA DE PESQUISA -->    
 
-    
+<body>
+    <div class="conteiner">
+        <div class="bancodehoras">
+            <div class="divlateral">
+                <!-- <p>Banco de Horas</p> -->
+            </div>
+            <div class="divbodyhoras">
+                <div class="pesquisatopo">
+                    <form  action="../php/pesquisahoras.php" method="post" class="formulariobancodehoras">
+                        <div class="box2019-pesquisa">
+                            <div class="infostopobar">Data:<input type="date" name="datapesquisa"></div>
+                            <div class="infostopobar">Empresa:
+                                <select id="lojapesquisa" name="lojapesquisa">
+                                    <option value="1">LOJA 1</option>
+                                    <option value="2">LOJA 2</option>
+                                    <option value="3">LOJA 3</option>
+                                </select>
+                            </div>
+                            <div class="infostopobar2">Funcionario: <input type="text" name="pesquisanomefuncionario"></div>
+                        </div>
+                        <div class="botaopesquisatopo"><input type="submit" value="Pesquisar" /></div>
+                    </form>  
+                </div>
+                <div class="quadradoshoras">
+                    <div class="informacoeshoras">
+                        <div class="horasextras">
+                            <p>+24</p>
+                            <p>EXTRAS</p>
+                        </div>
+                        <div class="totalhoras">
+                            <p>+820H</p>
+                            <p>TOTAL</p>
+                        </div>
+                        <div class="totalfaltas">
+                            <p>10</p>
+                            <p>FALTAS</p>
+                        </div>
+                        <div class="totalatestados">
+                            <p>1</p>
+                            <p>ATESTADOS</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="infonomehoras">
+                    <div class="tabelabancohoras">
+                        <table cellspacing="0" cellpadding="0" class="tablehorasbody">
+                            <tr>
+                                <th>NOME</th>
+                                <th>DATA</th>
+                                <th>INICIO</th>
+                                <th>PAUSA</th>
+                                <th>VOLTA</th>
+                                <th>SAIDA</th>
+                                <th>TOTAL</th>
+                                <th>EXTRA</th>
+                            </tr>
+                            <tr>
+                                <td>Kelviny Henrique de Sousa</td>
+                                <td>04/05/2019</td>
+                                <td>08:00:00</td>
+                                <td>08:00:00</td>
+                                <td>08:00:00</td>
+                                <td>08:00:00</td>
+                                <td>800h</td>
+                                <td>+5</td>
+                            </tr>
+
+                            <tr>
+                                <td>Kelviny Henrique de Sousa</td>
+                                <td>04/05/2019</td>
+                                <td>08:00:00</td>
+                                <td>08:00:00</td>
+                                <td>08:00:00</td>
+                                <td>08:00:00</td>
+                                <td>800h</td>
+                                <td>+5</td>
+                            </tr>
+
+
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+
+    </div>
 
 </body>
+
 </html>

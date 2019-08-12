@@ -1,5 +1,17 @@
 <?php 
 require "config.php";
+
+if (isset($_POST) && empty($_POST) == false) {
+   
+
+
+    
+} else {
+    # code...
+}
+
+
+
 $nomefuncionariopesquisa = $_POST['pesquisanomefuncionario'];
 $datapesquisa = $_POST['datapesquisa'];
 $loja = $_POST['lojapesquisa'];
@@ -16,8 +28,8 @@ $sql->bindValue(":loja", $loja);
 $sql->execute();
 
 if($sql->rowCount() > 0) {
-    $dados = $sql->fetch();
-    $idpesquisafuncionario = $dados['id'];
+	foreach ($dados = $sql->fetchAll() as $resultadofuncionario) {
+			$idpesquisafuncionario = $resultadofuncionario['id'];
     $sql = $pdo->prepare("SELECT * FROM ponto WHERE funcionario = :idpesquisafuncionario AND data = :datapesquisa");
     $sql->bindValue(":idpesquisafuncionario", "$idpesquisafuncionario");
     $sql->bindValue(":datapesquisa", $datapesquisa);
@@ -28,6 +40,8 @@ if($sql->rowCount() > 0) {
     } else {
         echo "Não achei nada aqui parseiro";
     }
+	}
+
 
 } else {
     echo "Não Existe funcionario cadastrado no sistema com este nome";

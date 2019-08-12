@@ -9,48 +9,6 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/tabelahoras.css">
 </head>
-<!-- SISTEMA DE PESQUISA -->
-                    
-<!-- TESTE BETA -->
-<?php 
-require "../php/config.php";
-
-if (isset($_POST) && empty($_POST) == false)  {
-    $nomefuncionariopesquisa = $_POST['pesquisanomefuncionario'];
-$datapesquisa = $_POST['datapesquisa'];
-$loja = $_POST['lojapesquisa'];
-
-// PEGA HORA ORGANIZA PARA FICAR TUDO DE ACORDO COM O QUE PE SALVO NO BANCO DE DADOS
-$datapesquisa = explode("-", $datapesquisa);
-list($ano, $mes, $dia) = $datapesquisa; 
-$datapesquisa = "$ano-$mes-$dia-";
-
-
-$sql = $pdo->prepare("SELECT * FROM funcionarios WHERE nome LIKE :nomefuncionariopesquisa AND empresa = :loja ORDER BY id");
-$sql->bindValue(":nomefuncionariopesquisa", "%$nomefuncionariopesquisa%", PDO::PARAM_STR);
-$sql->bindValue(":loja", $loja);
-$sql->execute();
-
-if($sql->rowCount() > 0) {
-    $dados = $sql->fetch();
-    $idpesquisafuncionario = $dados['id'];
-    $sql = $pdo->prepare("SELECT * FROM ponto WHERE funcionario = :idpesquisafuncionario AND data = :datapesquisa");
-    $sql->bindValue(":idpesquisafuncionario", "$idpesquisafuncionario");
-    $sql->bindValue(":datapesquisa", $datapesquisa);
-    $sql->execute();
-    if($sql->rowCount() > 0 ){
-        $registrosdeponto = $sql->fetch();
-        echo $registrosdeponto['Entrada'];
-    } else {
-        echo "Não achei nada aqui parseiro";
-    }
-
-} else {
-    echo "Não Existe funcionario cadastrado no sistema com este nome";
-}
-}
-?>
-
 
 
 <body>
@@ -115,28 +73,63 @@ if($sql->rowCount() > 0) {
                                 <th>TOTAL</th>
                                 <th>EXTRA</th>
                             </tr>
-                            <tr>
-                                <td><?php if (isset($_POST) && empty($_POST) == false) { echo $dados['nome'];}?></td>
-                                <td><?php if (isset($_POST) && empty($_POST) == false) { echo $$registrosdeponto['data'];}?></td>
-                                <td><?php if (isset($_POST) && empty($_POST) == false) { echo $$registrosdeponto['entrada'];}?></td>
-                                <td><?php if (isset($_POST) && empty($_POST) == false) { echo $registrosdeponto['pausa'];}?></td>
-                                <td><?php if (isset($_POST) && empty($_POST) == false) { echo $registrosdeponto['retorno'];}?></td>
-                                <td><?php if (isset($_POST) && empty($_POST) == false) { echo $registrosdeponto['saida'];}?></td>
+
+
+                            <?php if (isset($_POST['pesquisanomefuncionario']) && empty($_POST['datapesquisa']) == false) {
+   
+
+require "../php/config.php";
+$nomefuncionariopesquisa = $_POST['pesquisanomefuncionario'];
+$datapesquisa = $_POST['datapesquisa'];
+$loja = $_POST['lojapesquisa'];
+
+// PEGA HORA ORGANIZA PARA FICAR TUDO DE ACORDO COM O QUE PE SALVO NO BANCO DE DADOS
+$datapesquisa = explode("-", $datapesquisa);
+list($ano, $mes, $dia) = $datapesquisa; 
+$datapesquisa = "$ano-$mes-$dia-";
+
+
+$sql = $pdo->prepare("SELECT * FROM funcionarios WHERE nome LIKE :nomefuncionariopesquisa AND empresa = :loja ORDER BY id");
+$sql->bindValue(":nomefuncionariopesquisa", "%$nomefuncionariopesquisa%", PDO::PARAM_STR);
+$sql->bindValue(":loja", $loja);
+$sql->execute();
+
+if($sql->rowCount() > 0) {
+	foreach ($dados = $sql->fetchAll() as $resultadofuncionario) {
+			$idpesquisafuncionario = $resultadofuncionario['id'];
+    $sql = $pdo->prepare("SELECT * FROM ponto WHERE funcionario = :idpesquisafuncionario AND data = :datapesquisa");
+    $sql->bindValue(":idpesquisafuncionario", "$idpesquisafuncionario");
+    $sql->bindValue(":datapesquisa", $datapesquisa);
+    $sql->execute();
+    if($sql->rowCount() > 0 ){
+        
+        $registrosdeponto = $sql->fetch();
+        $dadosdata = $registrosdeponto['data'];
+       $dadosentrada = $registrosdeponto['Entrada'];
+       $dadospausa = $registrosdeponto['Pausa'];  
+       $dadosretorno = $registrosdeponto['Retorno'];
+       $dadosaida = $registrosdeponto['Saida'];
+       
+       
+       ?>
+
+<tr>
+        <td><?php echo $resultadofuncionario['nome']; ?></td>
+                                <td><?php  echo $dadosdata; ?></td>
+                                <td><?php  echo $dadosentrada; ?></td>
+                                <td><?php  echo $dadospausa; ?></td>
+                                <td><?php  echo $dadosretorno; ?></td>
+                                <td><?php  echo $dadosaida; ?></td>
                                 <td>800h</td>
                                 <td>+5</td>
                             </tr>
+      
+      
+      <?php  
+    }}}} 
 
-                            <tr>
-                                <td>Kelviny Henrique de Sousa</td>
-                                <td>04/05/2019</td>
-                                <td>08:00:00</td>
-                                <td>08:00:00</td>
-                                <td>08:00:00</td>
-                                <td>08:00:00</td>
-                                <td>800h</td>
-                                <td>+5</td>
-                            </tr>
-
+?>
+                         
 
                         </table>
                     </div>

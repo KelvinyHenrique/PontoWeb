@@ -1182,6 +1182,8 @@ p {
 .tablehorasbody th {
      border-bottom: 2px solid rgb(255, 253, 253);
      padding-bottom: 13px;
+     padding-left: 30px;
+     padding-right: 30px;
 }
 
 table tr td{

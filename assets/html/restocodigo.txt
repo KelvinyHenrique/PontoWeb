@@ -1,0 +1,8 @@
+    <td><?php if (isset($_POST) && empty($_POST) == false) { echo $dados['nome'];}?></td>
+                                <td><?php if (isset($_POST) && empty($_POST) == false) { echo $$registrosdeponto['data'];}?></td>
+                                <td><?php if (isset($_POST) && empty($_POST) == false) { echo $$registrosdeponto['entrada'];}?></td>
+                                <td><?php if (isset($_POST) && empty($_POST) == false) { echo $registrosdeponto['pausa'];}?></td>
+                                <td><?php if (isset($_POST) && empty($_POST) == false) { echo $registrosdeponto['retorno'];}?></td>
+                                <td><?php if (isset($_POST) && empty($_POST) == false) { echo $registrosdeponto['saida'];}?></td>
+                                <td>800h</td>
+                                <td>+5</td>

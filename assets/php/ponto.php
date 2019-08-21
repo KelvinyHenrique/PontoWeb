@@ -58,7 +58,7 @@ if(isset($_SESSION['ponto']) && empty($_SESSION['ponto']) == false){
         //LOGO TENDO UMA LINHA ENTÃO VERIFICA SE O CAMPO FOI SETADO E SE ESTÁ VAZIO
         if(isset($dados[$intervalo_selecinado]) && empty($dados[$intervalo_selecinado]) == true){
             //UPDATE `ponto` SET `Pausa` = '04-55' WHERE `ponto`.`id` = 17;
-            $sql = $pdo->prepare("UPDATE ponto SET $intervalo_selecinado = :horaatual WHERE funcionario = :id AND data = :data" );
+            $sql = $pdo->prepare("UPDATE ponto SET $intervalo_selecinado = $horaatual WHERE funcionario = :id AND data = :data" );
             $sql->bindValue(":data", $data);
             $sql->bindValue(":id", $id);
             $sql->bindValue(":horaatual", $horaatual);
@@ -79,7 +79,7 @@ if(isset($_SESSION['ponto']) && empty($_SESSION['ponto']) == false){
 
     }else {
         echo $id;
-        $sql = $pdo->prepare("INSERT INTO ponto SET $intervalo_selecinado = :horaatual, funcionario = :id, data = :data");
+        $sql = $pdo->prepare("INSERT INTO ponto SET $intervalo_selecinado = $horaatual, funcionario = :id, data = :data");
         $sql->bindValue(":horaatual", $horaatual);
         $sql->bindValue(":id", $id);
         $sql->bindValue(":data", $data);

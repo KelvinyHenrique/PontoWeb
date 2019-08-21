@@ -1016,27 +1016,12 @@ p {
 }
 
 .divbodyhoras {
-    width: 95%;
-}
-
-.divlateral {
-    background-color: #008A55;
-    width: 5%;
-    height: 966px;
-    color: white;
-    font-size: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.divlateral p {
-    transform: rotate(-90deg);
+    width: 100%;
 }
 .pesquisatopo {
     width: 100%;
     height: 80px;
-    background-color: #00266A;
+    background-color: #009DFF;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1050,7 +1035,7 @@ p {
 
 .informacoeshoras {
     width: 100%;
-    height: 500px;
+    height: 250px;
 }
 
 .formulariobancodehoras {
@@ -1067,7 +1052,7 @@ p {
 
 .infostopobar {
     font-size: 20px;
-    color: #FFFFFF;
+    color: rgb(255, 255, 255);
     display: flex;
     align-items: center;
 }
@@ -1080,14 +1065,14 @@ p {
 }
 
 .infostopobar input {
-    width: 200px;
+    width: 225px;
     height: 30px;
     margin: 10px;
     font-size: 20px;
 }
 
 .infostopobar2 input{
-    width: 700px;
+    width: 600px;
     height: 30px;
     margin: 10px;
     font-size: 30px;
@@ -1100,7 +1085,18 @@ p {
     padding-right:  5px;
     padding-left: 5px;
     margin: 10px;
-    
+}
+
+.resumododia {
+    width: 90%;
+    height: 50px;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 50px;
+    font-size: 25px;
+    font-weight: 400;
+    border-bottom: 1px solid #009DFF;
+    padding-bottom: 15px;
 }
 
 .botaopesquisatopo input{
@@ -1113,12 +1109,6 @@ p {
     border-radius: 15px;
     background-color: rgb(12, 209, 133);
 }
-
-.quadradoshoras {
-    width: 100%;
-    height: 500px;
-}
-
 .informacoeshoras {
     display: flex;
     align-items: center;
@@ -1127,7 +1117,7 @@ p {
 
 .horasextras, .totalhoras, .totalfaltas, .totalatestados {
     width: 350px;
-    height: 250px;
+    height: 130px;
     margin-left: 40px;
     margin-right: 40px;
     display: flex;
@@ -1140,7 +1130,7 @@ p {
 }
 
 .horasextras {
-    background-color: red;
+    background-color: #FF5165;
 }
 
 .totalhoras {
@@ -1148,7 +1138,7 @@ p {
 }
 
 .totalfaltas {
-    background-color: #005574;
+    background-color: #F55D3E;
 }
 
 .totalatestados {
@@ -1163,7 +1153,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffffff;
+    color: #000000;
     font-size: 30px;
 }
 
@@ -1175,12 +1165,12 @@ p {
 }
 
 .tablehorasbody td{
-    border-bottom: 2px solid rgb(255, 253, 253);
+    border-bottom: 2px solid rgb(0, 0, 0);
     padding: 30px;
 }
 
 .tablehorasbody th {
-     border-bottom: 2px solid rgb(255, 253, 253);
+     border-bottom: 2px solid rgb(0, 0, 0);
      padding-bottom: 13px;
      padding-left: 30px;
      padding-right: 30px;

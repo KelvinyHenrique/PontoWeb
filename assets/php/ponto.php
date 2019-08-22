@@ -19,7 +19,7 @@ $data = explode("/", $data);
    
 list($dia, $mes, $ano) = $data;
    
-$data = "$ano-$mes-$dia";
+$data = "$ano/$mes/$dia";
  //echo $data;
 
 // FIM DATA
@@ -28,21 +28,10 @@ $data = "$ano-$mes-$dia";
 //PEGA HORA ATUAL
 
 $horaatual = date('h:i:s');
-$horaatual = explode(":", $horaatual);
-list($hora, $minuto, $segundos) = $horaatual;
-
-$horaatual = "$hora-$minuto-$segundos";
-echo $horaatual;
-
-
-
-
 
 if(isset($_SESSION['ponto']) && empty($_SESSION['ponto']) == false){
 
     $id = $_SESSION['ponto'];
-
-
     // SELECIONA TODOS OS CAMPOS DA TABELA PONTO ONDE O ID É IGUAL AO ID DO USUARIO E A DATA É IGUAL A DATA ATUAL
     $sql = $pdo->prepare("SELECT * FROM ponto WHERE funcionario = :id AND data = :data");
     $sql->bindValue(":id", $id);
@@ -58,18 +47,16 @@ if(isset($_SESSION['ponto']) && empty($_SESSION['ponto']) == false){
         //LOGO TENDO UMA LINHA ENTÃO VERIFICA SE O CAMPO FOI SETADO E SE ESTÁ VAZIO
         if(isset($dados[$intervalo_selecinado]) && empty($dados[$intervalo_selecinado]) == true){
             //UPDATE `ponto` SET `Pausa` = '04-55' WHERE `ponto`.`id` = 17;
-            $sql = $pdo->prepare("UPDATE ponto SET $intervalo_selecinado = $horaatual WHERE funcionario = :id AND data = :data" );
+            $sql = $pdo->prepare("UPDATE ponto SET $intervalo_selecinado = :horaatual WHERE funcionario = :id AND data = :data" );
             $sql->bindValue(":data", $data);
             $sql->bindValue(":id", $id);
-            $sql->bindValue(":horaatual", $horaatual);
+            $sql->bindValue(":horaatual", $horaatual222);
             $sql->execute();
-            echo "Tabela Atualizada com o novo campo do proximo intervalo";
             header("Location: ../html/sucesso.php");
             session_destroy();
         } else //SE NÃO FOI SETADO MAS ESTÁ PREENCHIDO ENTÃO PASSAR PARA A LiNHA DE BAIXO
         {   
             session_destroy();
-            echo "Você já bateu o ponto".$horaatual;
             header("Location: ../html/erroponto.php");
             exit;
         }
@@ -79,7 +66,7 @@ if(isset($_SESSION['ponto']) && empty($_SESSION['ponto']) == false){
 
     }else {
         echo $id;
-        $sql = $pdo->prepare("INSERT INTO ponto SET $intervalo_selecinado = $horaatual, funcionario = :id, data = :data");
+        $sql = $pdo->prepare("INSERT INTO ponto SET $intervalo_selecinado = :horaatual, funcionario = :id, data = :data");
         $sql->bindValue(":horaatual", $horaatual);
         $sql->bindValue(":id", $id);
         $sql->bindValue(":data", $data);

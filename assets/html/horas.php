@@ -80,11 +80,11 @@ $loja = $_POST['lojapesquisa'];
 // PEGA HORA ORGANIZA PARA FICAR TUDO DE ACORDO COM O QUE PE SALVO NO BANCO DE DADOS
 $datainicial = explode("-", $datainicial);
 list($ano, $mes, $dia) = $datainicial; 
-$datainicial = "$ano-$mes-$dia";
+$datainicial = "$ano/$mes/$dia";
 
 $datafinal = explode("-", $datafinal);
 list($ano, $mes, $dia) = $datafinal; 
-$datafinal = "$ano-$mes-$dia";
+$datafinal = "$ano/$mes/$dia";
 
 
 
@@ -135,7 +135,7 @@ if($sql->rowCount() > 0) {
        <td><?php  echo $dadosentrada; ?></td>
        <td><?php  echo $dadospausa; ?></td>
        <td><?php  echo $dadosretorno; ?></td>
-       <td><?php  echo $dadospausa; ?></td>
+       <td><?php  echo $dadosaida; ?></td>
 
 <?php 
 
@@ -159,9 +159,9 @@ $horaIntervalo = $segundosIntervalo /3600;
 /* E finalmente para que você saiba realmente quantas horas o fulano trabalhou...de acordo com as horas inseridas pelo usuario é claro...*/
 
 $horasTrabalhadas = $totalHora - $horaIntervalo;
+$segundosTotal = $totalSegundos - $segundosIntervalo;
 
- $segundosTotal = $totalSegundos - $segundosIntervalo;
- 
+
  function converterHora($total_segundos){
            
     $hora = sprintf("%02s",floor($total_segundos / (60*60)));
@@ -176,13 +176,14 @@ $horasTrabalhadas = $totalHora - $horaIntervalo;
  
  /*E para que tudo saia num formato bunitinhu...te messa função aí para converter a parada ok...*/
 $hora = converterHora($segundosTotal);
-$horasextra = 36000 - $totalSegundos; 
-
 
 ?>
 
-       <td><?php echo $hora; ?></td>
-       <td><?php echo $horasextra;?></td>
+       <td><?php
+       
+       if (empty($resultadopesquisadata['Entrada']) == false && empty($resultadopesquisadata['Pausa']) == false && empty($resultadopesquisadata['Retorno']) == false && empty($resultadopesquisadata['Saida']) == false) {
+           echo $hora; } ?></td>
+       <td><?php echo $horasTrabalhadas;?></td>
    </tr>
     <?php
     }}}} 

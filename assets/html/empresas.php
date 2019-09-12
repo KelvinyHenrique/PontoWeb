@@ -28,19 +28,6 @@
             </form>
         </div>
     </div>
-
-<?php 
-require '../php/config.php';
-?>
-
-
-
-
-
-
-
-
-
     <div class="conteiner">
         <div class="boxempresa">
 
@@ -54,6 +41,29 @@ require '../php/config.php';
 
         </div>
     </div>
+<?php 
+require '../php/config.php';
+
+
+if(isset($_POST['valorbotao'])){
+    $encaminhamentoempresas = $_POST['valorbotao'];
+    echo "Entrou aqui".$encaminhamentoempresas;
+}
+
+$sql = $pdo->prepare("SELECT * FROM empresas");
+$sql ->execute();
+
+print_r($empresas);
+
+foreach ($empresas = $sql->fetchAll() as $lista) {    
+?>
+
+
+
+
+
+<?php 
+?>
 </body>
 
 </html>

@@ -50,7 +50,7 @@ if(isset($_SESSION['ponto']) && empty($_SESSION['ponto']) == false){
             $sql = $pdo->prepare("UPDATE ponto SET $intervalo_selecinado = :horaatual WHERE funcionario = :id AND data = :data" );
             $sql->bindValue(":data", $data);
             $sql->bindValue(":id", $id);
-            $sql->bindValue(":horaatual", $horaatual222);
+            $sql->bindValue(":horaatual", $horaatual);
             $sql->execute();
             header("Location: ../html/sucesso.php");
             session_destroy();

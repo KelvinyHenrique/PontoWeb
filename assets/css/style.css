@@ -1181,3 +1181,68 @@ table tr td{
     padding: 0px;
     border: none;
 }
+
+
+/* Informaçoes Empresas */
+
+.formularioempresas {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.navbartopoint {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 101, 58);
+}
+
+.inputempresasimages {
+    width: 30px;
+    height: 30px;
+}
+.inputsacoes  {
+    width: 130px;
+    height: 45px;
+    font-size: 20px;
+    font-family: 'Bahnschrift Regular';
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: rgb(221, 71, 29);
+    border: 0px solid black;
+    color: #FFFFFF;
+}
+
+.inputsacoes:hover {
+    background-color: rgb(245, 65, 16);
+}
+
+.inputpesquisa {
+    width: 300px;
+    height: 40px;
+    margin: 0;
+    border: none;
+}
+
+.pesquisa {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-right: 25px;
+}
+
+.pesquisa label {
+    margin-right: 10px;
+    font-family: 'Bahnschrift Regular';
+}
+
+.inputempresasimages {
+    background-color: rgb(245, 65, 16);
+    height: 50px;
+}

@@ -161,6 +161,7 @@ $horaIntervalo = $segundosIntervalo /3600;
 $horasTrabalhadas = $totalHora - $horaIntervalo;
 $segundosTotal = $totalSegundos - $segundosIntervalo;
 
+$horasextras = $horasTrabalhadas - 8;
 
  function converterHora($total_segundos){
            
@@ -178,13 +179,13 @@ $segundosTotal = $totalSegundos - $segundosIntervalo;
 $hora = converterHora($segundosTotal);
 
 ?>
-
-       <td><?php
-       
+       <td><?php 
        if (empty($resultadopesquisadata['Entrada']) == false && empty($resultadopesquisadata['Pausa']) == false && empty($resultadopesquisadata['Retorno']) == false && empty($resultadopesquisadata['Saida']) == false) {
            echo $hora; } ?></td>
-       <td><?php echo $horasTrabalhadas;?></td>
-   </tr>
+       <td><?php
+       if (empty($resultadopesquisadata['Entrada']) == false && empty($resultadopesquisadata['Pausa']) == false && empty($resultadopesquisadata['Retorno']) == false && empty($resultadopesquisadata['Saida']) == false) {
+           echo $horasextras; } ?></td>
+        </tr>
     <?php
     }}}} 
 

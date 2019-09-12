@@ -1,38 +1,49 @@
 <?php 
-require "config.php";
-$nomefuncionariopesquisa = $_POST['pesquisanomefuncionario'];
-$datapesquisa = $_POST['datapesquisa'];
-$loja = $_POST['lojapesquisa'];
-
-// PEGA HORA ORGANIZA PARA FICAR TUDO DE ACORDO COM O QUE PE SALVO NO BANCO DE DADOS
-$datapesquisa = explode("-", $datapesquisa);
-list($ano, $mes, $dia) = $datapesquisa; 
-$datapesquisa = "$ano-$mes-$dia-";
 
 
-$sql = $pdo->prepare("SELECT * FROM funcionarios WHERE nome LIKE :nomefuncionariopesquisa AND empresa = :loja ORDER BY id");
-$sql->bindValue(":nomefuncionariopesquisa", "%$nomefuncionariopesquisa%", PDO::PARAM_STR);
-$sql->bindValue(":loja", $loja);
-$sql->execute();
 
-if($sql->rowCount() > 0) {
-	foreach ($dados = $sql->fetchAll() as $resultadofuncionario) {
-			echo $resultadofuncionario['nome'];
-			$idpesquisafuncionario = $resultadofuncionario['id'];
-    $sql = $pdo->prepare("SELECT * FROM ponto WHERE funcionario = :idpesquisafuncionario AND data = :datapesquisa");
-    $sql->bindValue(":idpesquisafuncionario", "$idpesquisafuncionario");
-    $sql->bindValue(":datapesquisa", $datapesquisa);
-    $sql->execute();
-    if($sql->rowCount() > 0 ){
-        $registrosdeponto = $sql->fetch();
-        echo $registrosdeponto['Entrada'];
-    } else {
-        echo "Não achei nada aqui parseiro";
-    }
-	}
+$dadosentrada = $resultadopesquisadata['Entrada'];
+$dadospausa = $resultadopesquisadata['Pausa'];  
+$dadosretorno = $resultadopesquisadata['Retorno'];
+$dadosaida = $resultadopesquisadata['Saida'];
 
+$horaInicial  = strtotime($dadosentrada);
+$horaFinal    = strtotime($dadosaida);
+$intervalo    = strtotime($dadosretorno);
+$horaAuxuliar = strtotime($dadospausa);
+/*
+     Bom...agora é só dividir os valores...e você terá o total de segundos trabalhados
+ */
+$totalSegundos = ($horaFinal - $horaInicial);
 
-} else {
-    echo "Não Existe funcionario cadastrado no sistema com este nome";
+/* Observe que...já que estamos falando de segundos e você quer 
+     saber o total de horas trabalhas...então...você terá que dividir pela quantidade de segundos existente em 1 hora...que no caso é 3600 segundos ok*/
+$totalHora = $totalSegundos / 3600; 
+
+/*E não podemos esquecer a hora de intervalo né...observe que criei uma hora auxiliar para que possa ser interagaida com ele beleza...*/
+$segundosIntervalo = $intervalo - $horaAuxuliar;
+$horaIntervalo = $segundosIntervalo /3600;
+
+/* E finalmente para que você saiba realmente quantas horas o fulano trabalhou...de acordo com as horas inseridas pelo usuario é claro...*/
+
+$horasTrabalhadas = $totalHora - $horaIntervalo;
+$segundosTotal = $totalSegundos - $segundosIntervalo;
+
+$horasextras = $horasTrabalhadas - 8;
+
+ function converterHora($total_segundos){
+           
+    $hora = sprintf("%02s",floor($total_segundos / (60*60)));
+    $total_segundos = ($total_segundos % (60*60));
+    
+    $minuto = sprintf("%02s",floor ($total_segundos / 60 ));
+    $total_segundos = ($total_segundos % 60);
+    
+    $hora_minuto = $hora.":".$minuto;
+    return $hora_minuto;
 }
+ 
+ /*E para que tudo saia num formato bunitinhu...te messa função aí para converter a parada ok...*/
+$hora = converterHora($segundosTotal);
+
 ?>

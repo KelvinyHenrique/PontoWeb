@@ -1203,9 +1203,12 @@ table tr td{
 }
 
 .inputempresasimages {
-    width: 30px;
-    height: 30px;
+    width: 37px;
+    height: 37px;
+    padding: 3px;
 }
+
+
 .inputsacoes  {
     width: 130px;
     height: 45px;
@@ -1227,6 +1230,11 @@ table tr td{
     height: 40px;
     margin: 0;
     border: none;
+    font-size: 25px;
+}
+
+.inputempresasimages:hover {
+    background-color: rgb(224, 72, 30);
 }
 
 .pesquisa {
@@ -1242,7 +1250,47 @@ table tr td{
     font-family: 'Bahnschrift Regular';
 }
 
-.inputempresasimages {
-    background-color: rgb(245, 65, 16);
-    height: 50px;
+.boxempresa {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.boxlistaempresa {
+    width: 400px;
+    height: 200px;
+    color: #FFFFFF;
+    background-color: #FE4A49;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo-empresanumero {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.razaosocialempresas {
+    font-size: 20px;
+}
+
+.cnpjempresas {
+    font-size: 20px;
+}
+
+.numerofuncionariosempresas {
+    font-size: 20px;
+}
+
+.titulo-empresanumero, .razaosocialempresas, .cnpjempresas, .numerofuncionariosempresas {
+    margin: 7px;
 }

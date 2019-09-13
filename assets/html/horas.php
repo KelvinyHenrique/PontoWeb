@@ -87,8 +87,6 @@ list($ano, $mes, $dia) = $datafinal;
 $datafinal = "$ano/$mes/$dia";
 
 
-
-
 $sql = $pdo->prepare("SELECT * FROM funcionarios WHERE nome LIKE :nomefuncionariopesquisa AND empresa = :loja ORDER BY id");
 $sql->bindValue(":nomefuncionariopesquisa", "%$nomefuncionariopesquisa%", PDO::PARAM_STR);
 $sql->bindValue(":loja", $loja);

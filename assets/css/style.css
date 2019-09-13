@@ -1294,3 +1294,13 @@ table tr td{
 .titulo-empresanumero, .razaosocialempresas, .cnpjempresas, .numerofuncionariosempresas {
     margin: 7px;
 }
+
+
+/* FORMULARIO DE CADASTRO DE EMPRESAS */
+
+
+.bodyiniempresa {
+    background-color:#A846A0;
+    width: 100%;
+    height: 500px;
+}

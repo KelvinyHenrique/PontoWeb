@@ -46,7 +46,7 @@ if(isset($_SESSION['admin']) && empty($_SESSION['admin']) == false){
     $sql = $pdo->prepare("SELECT * FROM funcionarios");
     $sql->execute();
     if($sql->rowCount() > 0){
-        ?>
+            ?>
             </div>
             <div class="lista-funcionarios-conteiner">
                 <?php          foreach ($funcionarios = $sql->fetchAll() as $lista) {
@@ -64,21 +64,13 @@ if(isset($_SESSION['admin']) && empty($_SESSION['admin']) == false){
                         } 
                         ?>
                         </div>
-
                         <div class="imagem-box-perfil"><img src="../imagens/icons/perfil/boy.svg" alt=""></div>
                         <div class="nome-funcionario"><?php echo $lista['nome']; ?></div>
                         <div class="setor-funcionario"><?php echo $lista['funcao']; ?></div>
                         <div class="loja-funcionario"><?php echo $lista['empresa']; ?></div>
                         </div>
-                      
                        </button>
-                      
-                   </form>
-                   
-                
-
-
-                    
+                   </form>   
             </div>
                 <?php
         }

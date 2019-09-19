@@ -107,8 +107,6 @@ if($sql->rowCount() > 0) {
                                 <th>TOTAL</th>
                                 <th>EXTRA</th>
                             </tr>
-    
-    
     <?php
 	foreach ($dados = $sql->fetchAll() as $resultadofuncionario) {
 			$idpesquisafuncionario = $resultadofuncionario['id'];
@@ -158,7 +156,6 @@ $horaIntervalo = $segundosIntervalo /3600;
 
 $horasTrabalhadas = $totalHora - $horaIntervalo;
 $segundosTotal = $totalSegundos - $segundosIntervalo;
-
 $horasextras = $horasTrabalhadas - 8;
 
  function converterHora($total_segundos){
@@ -172,10 +169,8 @@ $horasextras = $horasTrabalhadas - 8;
     $hora_minuto = $hora.":".$minuto;
     return $hora_minuto;
 }
- 
  /*E para que tudo saia num formato bunitinhu...te messa função aí para converter a parada ok...*/
 $hora = converterHora($segundosTotal);
-
 ?>
        <td><?php 
        if (empty($resultadopesquisadata['Entrada']) == false && empty($resultadopesquisadata['Pausa']) == false && empty($resultadopesquisadata['Retorno']) == false && empty($resultadopesquisadata['Saida']) == false) {
@@ -186,10 +181,7 @@ $hora = converterHora($segundosTotal);
         </tr>
     <?php
     }}}} 
-
 ?>
-                         
-
                         </table>
                     </div>
                 </div>

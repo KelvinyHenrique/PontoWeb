@@ -1199,7 +1199,8 @@ table tr td{
     height: 70px;
     display: flex;
     align-items: center;
-    background-color: rgb(255, 101, 58);
+    justify-content: space-between;
+    background-color: #497EFF;
 }
 
 .inputempresasimages {
@@ -1216,13 +1217,13 @@ table tr td{
     font-family: 'Bahnschrift Regular';
     margin-left: 20px;
     margin-right: 20px;
-    background-color: rgb(221, 71, 29);
+    background-color: rgb(71, 119, 238);
     border: 0px solid black;
     color: #FFFFFF;
 }
 
 .inputsacoes:hover {
-    background-color: rgb(245, 65, 16);
+    background-color: rgb(52, 92, 196);
 }
 
 .inputpesquisa {
@@ -1234,7 +1235,7 @@ table tr td{
 }
 
 .inputempresasimages:hover {
-    background-color: rgb(224, 72, 30);
+    background-color: #497EFF;
 }
 
 .pesquisa {
@@ -1263,7 +1264,7 @@ table tr td{
     width: 400px;
     height: 200px;
     color: #FFFFFF;
-    background-color: #FE4A49;
+    background-color: #7632FF;
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 20px;
@@ -1278,29 +1279,138 @@ table tr td{
     font-size: 30px;
     font-weight: 700;
 }
-
-.razaosocialempresas {
-    font-size: 20px;
-}
-
-.cnpjempresas {
-    font-size: 20px;
-}
-
-.numerofuncionariosempresas {
-    font-size: 20px;
-}
-
-.titulo-empresanumero, .razaosocialempresas, .cnpjempresas, .numerofuncionariosempresas {
+/* .titulo-empresanumero, .razaosocialempresas, .cnpjempresas, .numerofuncionariosempresas {
     margin: 7px;
-}
+} */
 
-
-/* FORMULARIO DE CADASTRO DE EMPRESAS */
-
-
-.bodyiniempresa {
-    background-color:#A846A0;
-    width: 100%;
+.cadastroempresa {
+    margin: 40px;
     height: 500px;
+    background-color: #32322C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
+.botaocadastroempresa {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alinhamentoempresa {
+    display: flex;
+    width: 100%;
+}
+
+.alinhamentoempresa2 {
+    display: none;
+    width: 40%;
+}
+
+
+.titulocadastro {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    font-size: 30px;
+    color: #FFFFFF;
+    margin: 10px;
+}
+
+.cadastroempresa input {
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: #00000000;
+    border:  1px solid #ffffff;
+    color: #FFFFFF;
+    padding: 10px;
+}
+
+.boxinputs {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.rzsocial {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rzsocial input {
+ width: 85%;
+ height: 35px;
+ font-size: 30px
+}
+
+.cnpjempresa {
+    width: 100%;
+    height: 45px;
+    margin: 10px;
+    font-size: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.cnpjempresa input {
+ width: 85%;
+ height: 35px;
+ font-size: 30px
+}
+
+.rzsocial input::-webkit-input-placeholder {
+    padding: 0;
+    font-size: 20px;
+    color: #FFFFFF;
+
+}
+
+.cnpjempresa input::-webkit-input-placeholder {
+    padding: 0;
+    font-size: 20px;
+    color: #FFFFFF;
+
+}
+
+.selecaoadmin {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.selecaoadmin select {
+    width: 89%;
+    height: 45px;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.formcadastroempresa {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+/* Teste */
+  
+  .abrirempresa {
+      display:block;
+      transition: 5s;
+    }

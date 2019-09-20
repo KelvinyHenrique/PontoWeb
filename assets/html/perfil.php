@@ -55,9 +55,32 @@ if(isset($_POST['funcionario'])){
 
                 </div>
             </div>
+            <div class="relatoriofuncionario">
+                
+                <div class="inputrelatoriofuncionario">
+                    
+                <div class="relatorio-widgets-funcionario">
+                       <div class="div-funcionario-relatorio">Data Inicial:<input type="date"></div>
+                        <div class="div-funcionario-relatorio">Data Final: <input type="date"></div>
+                        <div class="div-funcionario-relatorio">Empresa: <select name="" id="">
+                            <option value="">CA CALÇADOS EIRELI</option>
+                        </select></div>
+                        <div class="div-funcionario-relatorio">Funcionario: <input type="text"></div>
+                </div>
+
+                <div>
+                    <div><button class="botaogerarrelatorio">Gerar Relatorio</button></div>
+                </div>
+                </div>
+                <div class="alinhamentotriangulo">
+                      <div class="triangulorelatorio">
+
+                </div>
+                </div>
+              
+            </div>
             <div class="widgets">
                 <div class="widgets-box">
-
                     <div class="widgets-01">
                         <div class="circulo-perfil">5</div>
                         <div>
@@ -86,11 +109,15 @@ if(isset($_POST['funcionario'])){
                         </div>
                     </div>
 
+                    
                     <div class="widgets-01">
-                        <div class="circulo-perfil">12</div>
+                        <button class="botaofuncionarioperfil">
+                              <div class="circulo-perfil">12</div>
                         <div>
                             <p>Relatório</p>
                         </div>
+                        </button>
+                      
                     </div>
 
                 </div>

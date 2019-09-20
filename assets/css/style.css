@@ -849,6 +849,14 @@ p {
 
 /* PAGINA DE PERFIL */
 
+.botaofuncionarioperfil {
+    background-color: #00000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .topo-perfil {
     width: 50%;
     height: 100%;
@@ -889,15 +897,15 @@ p {
 
 .widgets-box {
     width: 90%;
-    height: 95%;
+    height: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .circulo-perfil {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     background-color: #38b764;
     display: flex;
@@ -908,8 +916,8 @@ p {
 }
 
 .perfil-body {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     background-color: #b13e53;
     display: flex;
@@ -971,13 +979,13 @@ p {
 }
 
 .widgets-01 {
-    width: 250px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 20px;
+    padding: 20px;
 }
 
 .widgets-01 p {
@@ -1001,6 +1009,76 @@ p {
     color: white;
     font-size: 25px;
 }
+
+.relatoriofuncionario {   
+    width: 72%;
+    height: 80px;
+    margin: 0;
+    border: 0;
+    position: absolute;
+    background-color: #253031;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: #FFFFFF;
+}
+
+.botaogerarrelatorio {
+    width: 140px;
+    height: 45px;
+    background-color: #253031;
+    color: #ffffff;
+    padding: 5px;
+}
+
+.alinhamentotriangulo {
+    margin: 0;
+    border: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:flex-end; 
+}
+
+.triangulorelatorio {
+    margin: -1px;
+    border: 0;
+    border-right: 17px solid transparent;
+    border-left: 17px solid transparent;
+    border-top: 17px solid #253031;
+    display: inline-block;
+}
+
+.relatorio-widgets-funcionario input {
+    margin-left: 5px; 
+    width: 170px;
+    height: 30px;
+}
+
+.relatorio-widgets-funcionario select {
+    width: 250px;
+    height: 30px;
+}
+
+.div-funcionario-relatorio {
+    margin: 20px;
+}
+
+.relatorio-widgets-funcionario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.inputrelatoriofuncionario {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between
+}
+
+
 
 .botaoeditar button:hover {
     background-color: #ffffff;
@@ -1284,7 +1362,7 @@ table tr td{
 } */
 
 .cadastroempresa {
-    margin: 40px;
+    margin: 20px;
     height: 500px;
     background-color: #32322C;
     display: flex;
@@ -1407,10 +1485,7 @@ table tr td{
     justify-content: space-between;
     flex-direction: column;
 }
-
-/* Teste */
-  
   .abrirempresa {
       display:block;
-      transition: 5s;
+      position: absolute;
     }

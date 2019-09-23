@@ -903,6 +903,7 @@ p {
     justify-content: center;
 }
 
+
 .circulo-perfil {
     width: 150px;
     height: 150px;
@@ -1011,10 +1012,11 @@ p {
 }
 
 .relatoriofuncionario {   
-    width: 72%;
+    width: 55%;
     height: 80px;
     margin: 0;
     border: 0;
+    border-radius: 10px;
     position: absolute;
     background-color: #253031;
     padding-left: 50px;
@@ -1077,13 +1079,30 @@ p {
     align-items: center;
     justify-content: space-between
 }
+.relatoriofunc2 {
+    display: none;
+}
 
+.relatoriovisivel {
+    display: block;
+}
 
+.relatorio-widgets-funcionario .inputfuncionariorel {
+    width: 300px;
+    font-size: 20px;
+}
 
 .botaoeditar button:hover {
     background-color: #ffffff;
     border: black;
     color: black;
+}
+
+.relatoriofuncionario21 {
+    width: 100%;
+    margin:0;
+    padding: 0;
+    height: 100%;
 }
 
 /* Banco de Horas */

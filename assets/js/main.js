@@ -3,4 +3,3 @@ document.getElementById("cadastrarempresa").onclick = function() {abrircadastroe
 function abrircadastroempresa() {
     document.getElementById("alinhamentoempresa2").classList.toggle("abrirempresa");
 }
-

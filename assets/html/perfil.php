@@ -7,8 +7,28 @@ if(isset($_POST['funcionario'])){
     $sql = $pdo->prepare("SELECT * FROM funcionarios WHERE id = :botaofuncionario");
     $sql->bindValue(":botaofuncionario", $botaofuncionario);
     $sql->execute();
-    $infofuncionario = $sql->fetch();
+
+    // VARIAVEIS INFORMAÇÕES 
+    if ($sql->rowCount() > 0) {
+        $infofuncionario = $sql->fetch();
+        $nomefuncionario = $infofuncionario['nome'];
+        $funcao = $infofuncionario['funcao'];
+        $empresa = $infofuncionario['empresa'];
+        $nascimento = $infofuncionario['nascimento'];
+        $email = $infofuncionario['email'];
+        $infosenha = $infofuncionario['senha'];
+        $usuario = $infofuncionario['usuario'];
+        $pinuser =  $infofuncionario['pin']; 
+        $cpfuser = $infofuncionario['cpf'];
+    }
+    else {
+        header("Location: funcionarios.php");
+    }
+
+}     else {
+    header("Location: funcionarios.php");
 }
+
 ?>
 
 
@@ -33,20 +53,20 @@ if(isset($_POST['funcionario'])){
                         <img src="../imagens/icons/perfil/boy.svg" alt="">
                     </div>
                     <div class="prev-infos">
-                        <h3><?php echo $infofuncionario['nome']; ?></h3>
-                        <h3><?php echo $infofuncionario['funcao']; ?></h3>
-                        <h3><?php echo $infofuncionario['empresa']; ?></h3>
+                        <h3><?php echo $nomefuncionario ?></h3>
+                        <h3><?php echo $funcao ?></h3>
+                        <h3><?php echo $empresa ?></h3>
                     </div>
                 </div>
                 <div class="box-info-perf">
                     <div class="box-perfil-dados">
-                        <p>Nome completo:<?php echo $infofuncionario['nome']; ?></p>
-                        <p>Data Nascimento:<?php echo $infofuncionario['nascimento']; ?></p>
-                        <p>Email:<?php echo $infofuncionario['email']; ?></p>
-                        <p>Senha:<?php echo $infofuncionario['senha']; ?></p>
-                        <p>Usuario:<?php echo $infofuncionario['usuario']; ?></p>
-                        <p>PIN:<?php echo $infofuncionario['pin']; ?></p>
-                        <p>CPF:<?php echo $infofuncionario['cpf']; ?></p>
+                        <p>Nome completo:<?php echo $nomefuncionario; ?></p>
+                        <p>Data Nascimento:<?php echo $nascimento; ?></p>
+                        <p>Email:<?php echo $email; ?></p>
+                        <p>Senha:<?php echo $infosenha; ?></p>
+                        <p>Usuario:<?php echo $usuario ?></p>
+                        <p>PIN:<?php echo $pinuser ?></p>
+                        <p>CPF:<?php echo $cpfuser ?></p>
                         <div class="botaoeditar">
                             <button class="botaoeditar2">Editar</button>
                         </div>
@@ -55,28 +75,26 @@ if(isset($_POST['funcionario'])){
 
                 </div>
             </div>
-            <div class="relatoriofuncionario">
-                
-                <div class="inputrelatoriofuncionario">
+            <div class="relatoriofuncionario relatoriofunc2" id="relatoriofunc2">
+                    <form class="relatoriofuncionario21" method="post">
+                          <div class="inputrelatoriofuncionario">
                     
                 <div class="relatorio-widgets-funcionario">
                        <div class="div-funcionario-relatorio">Data Inicial:<input type="date"></div>
                         <div class="div-funcionario-relatorio">Data Final: <input type="date"></div>
-                        <div class="div-funcionario-relatorio">Empresa: <select name="" id="">
-                            <option value="">CA CALÇADOS EIRELI</option>
-                        </select></div>
-                        <div class="div-funcionario-relatorio">Funcionario: <input type="text"></div>
                 </div>
 
                 <div>
                     <div><button class="botaogerarrelatorio">Gerar Relatorio</button></div>
                 </div>
                 </div>
-                <div class="alinhamentotriangulo">
+<!--                 <div class="alinhamentotriangulo">
                       <div class="triangulorelatorio">
 
                 </div>
-                </div>
+                </div> -->
+                    </form>
+              
               
             </div>
             <div class="widgets">
@@ -111,7 +129,7 @@ if(isset($_POST['funcionario'])){
 
                     
                     <div class="widgets-01">
-                        <button class="botaofuncionarioperfil">
+                        <button class="botaofuncionarioperfil" id="botaoabrir">
                               <div class="circulo-perfil">12</div>
                         <div>
                             <p>Relatório</p>
@@ -125,6 +143,7 @@ if(isset($_POST['funcionario'])){
         </div>
     </div>
     </div>
+    <script type="text/javascript" src="../js/abrirempresa.js"></script>
 </body>
 
 </html>

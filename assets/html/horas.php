@@ -77,6 +77,9 @@ $datainicial = $_POST['datainicial'];
 $datafinal = $_POST['datafinal'];
 $loja = $_POST['lojapesquisa'];
 
+// ATENÇÃO ESTE COMANDO DESATIVA TODOS OS ERROS NÃO ESQUECER QUE ESTÁ DANDO UM ERRO NO BANCO DE HORAS NA LINHA DA FUNÇÃO QUE CONVERTE A HORA
+error_reporting(0);
+
 // PEGA HORA ORGANIZA PARA FICAR TUDO DE ACORDO COM O QUE PE SALVO NO BANCO DE DADOS
 $datainicial = explode("-", $datainicial);
 list($ano, $mes, $dia) = $datainicial; 

@@ -76,7 +76,7 @@ if(isset($_POST['funcionario'])){
                 </div>
             </div>
             <div class="relatoriofuncionario relatoriofunc2" id="relatoriofunc2">
-                    <form class="relatoriofuncionario21" method="post">
+                    <form class="relatoriofuncionario21" method="post" action="relatorio.html">
                           <div class="inputrelatoriofuncionario">
                     
                 <div class="relatorio-widgets-funcionario">
@@ -127,7 +127,6 @@ if(isset($_POST['funcionario'])){
                         </div>
                     </div>
 
-                    
                     <div class="widgets-01">
                         <button class="botaofuncionarioperfil" id="botaoabrir">
                               <div class="circulo-perfil">12</div>
@@ -135,9 +134,7 @@ if(isset($_POST['funcionario'])){
                             <p>Relatório</p>
                         </div>
                         </button>
-                      
                     </div>
-
                 </div>
             </div>
         </div>
@@ -145,5 +142,4 @@ if(isset($_POST['funcionario'])){
     </div>
     <script type="text/javascript" src="../js/abrirempresa.js"></script>
 </body>
-
 </html>

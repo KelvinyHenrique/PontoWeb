@@ -68,17 +68,17 @@
 
                 </div>
 
-                 <?php if(isset($_POST['pesquisanomefuncionario']) && isset($_POST['datafinal']) && empty($_POST['datainicial']) == false && empty($_POST['datafinal']) == false) {
-   
+                 <?php 
+                 require "../php/config.php";
+                 if(isset($_POST['pesquisanomefuncionario']) && isset($_POST['datafinal']) && empty($_POST['datainicial']) == false && empty($_POST['datafinal']) == false) {
 
-require "../php/config.php";
 $nomefuncionariopesquisa = $_POST['pesquisanomefuncionario'];
 $datainicial = $_POST['datainicial'];
 $datafinal = $_POST['datafinal'];
 $loja = $_POST['lojapesquisa'];
 
 // ATENÇÃO ESTE COMANDO DESATIVA TODOS OS ERROS NÃO ESQUECER QUE ESTÁ DANDO UM ERRO NO BANCO DE HORAS NA LINHA DA FUNÇÃO QUE CONVERTE A HORA
-error_reporting(0);
+// error_reporting(0);
 
 // PEGA HORA ORGANIZA PARA FICAR TUDO DE ACORDO COM O QUE PE SALVO NO BANCO DE DADOS
 $datainicial = explode("-", $datainicial);
@@ -136,7 +136,7 @@ if($sql->rowCount() > 0) {
        <td><?php  echo $dadosretorno; ?></td>
        <td><?php  echo $dadosaida; ?></td>
 
-<?php 
+       <?php 
 
 $horaInicial  = strtotime($dadosentrada);
 $horaFinal    = strtotime($dadosaida);
@@ -161,29 +161,20 @@ $horasTrabalhadas = $totalHora - $horaIntervalo;
 $segundosTotal = $totalSegundos - $segundosIntervalo;
 $horasextras = $horasTrabalhadas - 8;
 
- function converterHora($total_segundos){
-           
-    $hora = sprintf("%02s",floor($total_segundos / (60*60)));
-    $total_segundos = ($total_segundos % (60*60));
-    
-    $minuto = sprintf("%02s",floor ($total_segundos / 60 ));
-    $total_segundos = ($total_segundos % 60);
-    
-    $hora_minuto = $hora.":".$minuto;
-    return $hora_minuto;
-}
  /*E para que tudo saia num formato bunitinhu...te messa função aí para converter a parada ok...*/
-$hora = converterHora($segundosTotal);
 ?>
        <td><?php 
        if (empty($resultadopesquisadata['Entrada']) == false && empty($resultadopesquisadata['Pausa']) == false && empty($resultadopesquisadata['Retorno']) == false && empty($resultadopesquisadata['Saida']) == false) {
-           echo $hora; } ?></td>
+           echo $horasTrabalhadas; } ?></td>
        <td><?php
        if (empty($resultadopesquisadata['Entrada']) == false && empty($resultadopesquisadata['Pausa']) == false && empty($resultadopesquisadata['Retorno']) == false && empty($resultadopesquisadata['Saida']) == false) {
            echo $horasextras; } ?></td>
         </tr>
     <?php
-    }}}} 
+    
+// ACIMA VAI O CONVERTER  QUE ESTA NO
+
+}}}} 
 ?>
                         </table>
                     </div>

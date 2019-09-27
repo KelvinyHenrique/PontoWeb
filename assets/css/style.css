@@ -908,7 +908,7 @@ p {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background-color: #38b764;
+    background-color: #333333;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -917,10 +917,10 @@ p {
 }
 
 .perfil-body {
-    width: 200px;
-    height: 200px;
+    width: 280px;
+    height: 280px;
     border-radius: 50%;
-    background-color: #b13e53;
+    background-color: #333333;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -947,7 +947,7 @@ p {
 }
 
 .prev-infos {
-    width: 300px;
+    width: 50%;
     height: 200px;
     color: rgb(0, 0, 0);
     font-size: 24px;
@@ -964,13 +964,12 @@ p {
 
 .box-perfil-dados {
     width: 90%;
-    height: 90%;
-    border-radius: 15px;
-    background-color: #b13e53;
+    height: 80%;
+    background-color: #333333;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    font-size: 30px;
+    font-size: 20px;
     color: #ffffff;
     padding-left: 10px;
 }
@@ -980,8 +979,8 @@ p {
 }
 
 .widgets-01 {
-    width: 300px;
-    height: 300px;
+    width: 20%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1002,13 +1001,13 @@ p {
 }
 
 .botaoeditar button{
-    width: 150px;
+    width: 100px;
     height: 50px;
     border-radius: 10px;
     background-color: #00000000;
     border: 2px solid #38b764;
     color: white;
-    font-size: 25px;
+    font-size: 15px;
 }
 
 .relatoriofuncionario {   

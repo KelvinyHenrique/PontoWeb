@@ -1,8 +1,5 @@
 <?php 
-
-
-
-
+require  'config.php';
 $nome = $_POST['nome'];
 $cpf = $_POST['cpf'];
 $nascimento = $_POST['nascimento'];
@@ -29,21 +26,9 @@ echo '<div>',$admin,'</div>';
 
 /* Fim */
 
-
-
-
 echo $nome,'<br/>',$cpf,'<br/>',$nascimento,'<br/>', $usuario,'<br/>', $funcao,'<br/>', $senha,'<br/>', $email,'<br/>', $telefone,'<br/>';
 
-try {
-    $conexao = new PDO('mysql:host=localhost;dbname=ponto', 'root');
-    $conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "INSERT INTO funcionarios SET nome = '$nome', cpf = '$cpf', nascimento = '$nascimento', usuario = '$usuario', funcao = '$funcao', senha = '$senha', email = '$email', telefone = '$telefone', administrador = '$admin', empresa ='$empresa'";
-    $sql= $conexao->query($sql);
-
-} catch (PDOExeption $e) {
-    //throw $th;
-    echo $e;
-}
-
+    $sql =  $pdo->prepare("INSERT INTO funcionarios SET nome = '$nome', cpf = '$cpf', nascimento = '$nascimento', usuario = '$usuario', funcao = '$funcao', senha = '$senha', email = '$email', telefone = '$telefone', administrador = '$admin', empresa ='$empresa'") ;
+    $sql->execute();
 
 ?>

@@ -1,5 +1,4 @@
 <?php 
-
 require '../php/config.php';
 $botaofuncionario='';
 if(isset($_POST['funcionario'])){
@@ -11,6 +10,7 @@ if(isset($_POST['funcionario'])){
     // VARIAVEIS INFORMAÇÕES 
     if ($sql->rowCount() > 0) {
         $infofuncionario = $sql->fetch();
+        $idfuncionarioperfil = $botaofuncionario;
         $nomefuncionario = $infofuncionario['nome'];
         $funcao = $infofuncionario['funcao'];
         $empresa = $infofuncionario['empresa'];
@@ -20,6 +20,7 @@ if(isset($_POST['funcionario'])){
         $usuario = $infofuncionario['usuario'];
         $pinuser =  $infofuncionario['pin']; 
         $cpfuser = $infofuncionario['cpf'];
+        setcookie("funcionario", $idfuncionarioperfil);
     }
     else {
         header("Location: funcionarios.php");
@@ -60,13 +61,13 @@ if(isset($_POST['funcionario'])){
                 </div>
                 <div class="box-info-perf">
                     <div class="box-perfil-dados">
-                        <p>Nome completo:<?php echo $nomefuncionario; ?></p>
-                        <p>Data Nascimento:<?php echo $nascimento; ?></p>
-                        <p>Email:<?php echo $email; ?></p>
-                        <p>Senha:<?php echo $infosenha; ?></p>
-                        <p>Usuario:<?php echo $usuario ?></p>
-                        <p>PIN:<?php echo $pinuser ?></p>
-                        <p>CPF:<?php echo $cpfuser ?></p>
+                        <p>Nome completo:<?php echo " ".$nomefuncionario; ?></p>
+                        <p>Data Nascimento:<?php echo " ".$nascimento; ?></p>
+                        <p>Email:<?php echo " ".$email; ?></p>
+                        <p>Senha:<?php echo " ".$infosenha; ?></p>
+                        <p>Usuario:<?php echo " ".$usuario ?></p>
+                        <p>PIN:<?php echo " ".$pinuser ?></p>
+                        <p>CPF:<?php echo " ".$cpfuser ?></p>
                         <div class="botaoeditar">
                             <button class="botaoeditar2">Editar</button>
                         </div>
@@ -76,23 +77,24 @@ if(isset($_POST['funcionario'])){
                 </div>
             </div>
             <div class="relatoriofuncionario relatoriofunc2" id="relatoriofunc2">
-                    <form class="relatoriofuncionario21" method="post" action="relatorio.html">
+                    <form class="relatoriofuncionario21" method="post" action="relatorio.php">
                           <div class="inputrelatoriofuncionario">
                     
                 <div class="relatorio-widgets-funcionario">
-                       <div class="div-funcionario-relatorio">Data Inicial:<input type="date"></div>
-                        <div class="div-funcionario-relatorio">Data Final: <input type="date"></div>
+                       <div class="div-funcionario-relatorio">Data Inicial:<input type="date" name="datainicial"></div>
+                        <div class="div-funcionario-relatorio">Data Final: <input type="date" name="datafinal"></div>
                 </div>
 
                 <div>
                     <div><button class="botaogerarrelatorio">Gerar Relatorio</button></div>
                 </div>
                 </div>
-<!--                 <div class="alinhamentotriangulo">
-                      <div class="triangulorelatorio">
-
+                <!--                  
+                <div class="alinhamentotriangulo">
+                <div class="triangulorelatorio">
                 </div>
-                </div> -->
+                </div> 
+                -->
                     </form>
               
               

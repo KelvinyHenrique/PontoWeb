@@ -1507,3 +1507,188 @@ table tr td{
       display:block;
       position: absolute;
     }
+
+    /* Estilo dos turnos */
+
+    .conteiner-alinhamento-center {
+        width: 100%;
+        height: 100%;
+        top:50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        background-color: rebeccapurple;  
+        display: flex; 
+        flex-direction: row;
+
+    }
+
+    .menulateral {
+        background-color: #000000;
+        width: 4%;
+        height: 100%;
+    }
+
+    .bodyturnos {
+        width: 100%;
+        height: 100%;
+    }
+
+    .logoempresa {
+        width: 100%;
+        height: 10%;
+        padding-top: 10px;
+
+    }
+
+    .icon-menu-bar-direita img {
+        width: 100%;
+        margin-top: 30px;
+        height: 40px;
+    }
+
+    .icon-menu-bar-direita img:hover {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        transition: all 0.3s ease 0s;
+    }
+
+    .logoempresa img {
+        width: 100%;
+        height: 60px;
+    }
+
+    .barra-superior-horas {
+        width: 100%;
+        height: 7%;
+        background-color: #000000ce;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .botoesturnos {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        margin-left: 50px;
+    }
+
+    .btn-actions{
+        padding: 8px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 5px;
+        color: #FFFFFF;
+    }
+
+
+/* TEMPLATE BUTTON */
+
+.main-hr {
+    width: 30%;
+    border: none;
+    border-top: 1px solid #c3c3c3;
+  }
+  .icon-btn {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #cdcdcd;
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    transition: width 0.2s ease-in-out;
+    margin-right: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  .add-btn:hover {
+    width: 120px;
+  }
+  .add-btn::before,
+  .add-btn::after {
+    transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 10px;
+    top: calc(50% - 2px);
+    background: black;
+  }
+  .add-btn::after {
+    right: 14px;
+    overflow: hidden;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+  .add-btn::before {
+    left: 14px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+  }
+  .icon-btn:focus {
+    outline: none;
+  }
+  .btn-txt {
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .add-btn:hover::before,
+  .add-btn:hover::after {
+    width: 4px;
+    border-radius: 2px;
+  }
+  .add-btn:hover .btn-txt {
+    opacity: 1;
+  }
+  .add-icon::after,
+  .add-icon::before {
+    transition: all 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 2px;
+    top: calc(50% - 10px);
+    background: black;
+    overflow: hidden;
+  }
+  .add-icon::before {
+    left: 22px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+  }
+  .add-icon::after {
+    right: 22px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+  .add-btn:hover .add-icon::before {
+    left: 15px;
+    height: 4px;
+    top: calc(50% - 2px);
+  }
+  .add-btn:hover .add-icon::after {
+    right: 15px;
+    height: 4px;
+    top: calc(50% - 2px);
+  }
+
+  .botaoeditar {
+    margin-left: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 13px;
+      padding-top: 13px;
+      border-radius: 5px;
+      background-color: #FFFFFF;
+      color: #000000;
+      font-weight: 700;
+  }
+  
+  .botaoeditar:hover {
+      background-color: #F79820;
+      border: 1px solid #FFFFFF;
+      color: #ffffff;
+      cursor: pointer;
+  }

@@ -3,7 +3,7 @@
 unset($_COOKIE);
 session_destroy($_SESSION);
 
-header("Location:  ")
+header("Location:  ../../index.html");
 
 
 ?>

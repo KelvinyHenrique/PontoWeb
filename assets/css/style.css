@@ -1,14 +1,17 @@
-@font-face {
+
+    @font-face {
     font-family: 'Bahnschrift Regular';
     font-style: normal;
     font-weight: normal;
     src: local('Bahnschrift Regular'), url('../fonts/bahnschrift.woff') format('woff');
     }
 
+    @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 body{
     margin: 0;
     padding: 0;
-    font-family: 'Bahnschrift Regular';
+    font-family: 'Roboto', sans-serif;
 }
 
 h3 {
@@ -1517,7 +1520,7 @@ table tr td{
         left: 50%;
         position: absolute;
         transform: translate(-50%, -50%);
-        background-color: rebeccapurple;  
+        background-color: #46494C;  
         display: flex; 
         flex-direction: row;
 
@@ -1561,7 +1564,7 @@ table tr td{
     .barra-superior-horas {
         width: 100%;
         height: 7%;
-        background-color: #000000ce;
+        background-color: #ffffff;
         display: flex;
         align-items: center;
         flex-direction: row;
@@ -1583,97 +1586,6 @@ table tr td{
     }
 
 
-/* TEMPLATE BUTTON */
-
-.main-hr {
-    width: 30%;
-    border: none;
-    border-top: 1px solid #c3c3c3;
-  }
-  .icon-btn {
-    width: 50px;
-    height: 50px;
-    border: 1px solid #cdcdcd;
-    background: white;
-    border-radius: 25px;
-    overflow: hidden;
-    position: relative;
-    transition: width 0.2s ease-in-out;
-    margin-right: 10px;
-    margin-left: 10px;
-    cursor: pointer;
-  }
-  .add-btn:hover {
-    width: 120px;
-  }
-  .add-btn::before,
-  .add-btn::after {
-    transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
-    content: "";
-    position: absolute;
-    height: 4px;
-    width: 10px;
-    top: calc(50% - 2px);
-    background: black;
-  }
-  .add-btn::after {
-    right: 14px;
-    overflow: hidden;
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 2px;
-  }
-  .add-btn::before {
-    left: 14px;
-    border-top-left-radius: 2px;
-    border-bottom-left-radius: 2px;
-  }
-  .icon-btn:focus {
-    outline: none;
-  }
-  .btn-txt {
-    opacity: 0;
-    transition: opacity 0.2s;
-  }
-  .add-btn:hover::before,
-  .add-btn:hover::after {
-    width: 4px;
-    border-radius: 2px;
-  }
-  .add-btn:hover .btn-txt {
-    opacity: 1;
-  }
-  .add-icon::after,
-  .add-icon::before {
-    transition: all 0.2s ease-in-out;
-    content: "";
-    position: absolute;
-    height: 20px;
-    width: 2px;
-    top: calc(50% - 10px);
-    background: black;
-    overflow: hidden;
-  }
-  .add-icon::before {
-    left: 22px;
-    border-top-left-radius: 2px;
-    border-bottom-left-radius: 2px;
-  }
-  .add-icon::after {
-    right: 22px;
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 2px;
-  }
-  .add-btn:hover .add-icon::before {
-    left: 15px;
-    height: 4px;
-    top: calc(50% - 2px);
-  }
-  .add-btn:hover .add-icon::after {
-    right: 15px;
-    height: 4px;
-    top: calc(50% - 2px);
-  }
-
   .botaoeditar {
     margin-left: 10px;
       padding-left: 20px;
@@ -1687,8 +1599,127 @@ table tr td{
   }
   
   .botaoeditar:hover {
-      background-color: #F79820;
-      border: 1px solid #FFFFFF;
+      background-color: rgb(0, 0, 0);
+      border: 1px solid rgb(255, 255, 255);
       color: #ffffff;
       cursor: pointer;
   }
+
+  .info-turnos {
+      width: 100%;
+      height: 93%;
+      background-color: #DCDCDD;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .table-info-turnos {
+      width: 95%;
+      height: 95%;
+      background-color: #FFFFFF;
+      box-shadow: 10px 10px 10px 10px #888888;
+  }
+
+  .tabela-turnos {
+      color: black;
+      width: 100%;
+  }
+
+  .titulo-turnos {
+    width: 97.2%;
+      height: 50px;
+      margin-bottom: 40px;
+      color: #ffffff;
+      font-size: 25px;
+      padding-left: 50px;
+      padding-top: 20px;
+      background-color: #4b4949;
+  }
+
+  .tabela-turnos tr td {
+      color: #202020;
+      text-align: center;
+      font-size: 18px;
+      padding: 10px;
+  }
+
+  .botao-acoes-table {
+      padding-left: 12px;
+      padding-right: 12px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      background-color: #F55D3E;  
+      color: #FFFFFF;
+      border: none;
+      cursor: pointer;
+    }
+
+    .tabela-turnos tr td:hover .box-table-opt{
+         display: block;
+    }
+
+    .box-table-opt {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 150px;
+        height: 80px;
+        position: absolute;
+        margin: 10px 10px 10px 50px;
+        display: none;
+        transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;[]
+    }
+    
+    .box-table-opt button {
+        margin: 5px 0px 5px 0px;
+        width: 75%;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: #0080FF;  
+        color: #FFFFFF;
+        border: none;
+        cursor: pointer;
+        
+    }
+
+    .box-cadastrar-turnos {
+        margin-top: 25px;
+        margin-left: 25px;
+        width: 40%;
+        height: 40%;
+        position: absolute;
+        background-color: #009DFF;
+        transition-duration: 1s;
+        padding-left: 30px;
+        padding-top: 30px;
+    }
+
+    .botoesturnos {
+        width: 10%;
+        height: 80%;
+    }
+
+    .icon-btn {
+        width: 80%;
+        height: 95%;
+        border-radius: 5px;
+    }
+
+    div.hide {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+    .in-putin-turnos input {
+        width: 80%;
+        height: 100%;
+    }
+      
+
+    .in-putin-turnos {
+        width: 90%;
+        height: 25%;
+    }

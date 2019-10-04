@@ -22,12 +22,6 @@ if ($dadocheck > 1) {
 } else {
     $admin = 1;
 }
-echo '<div>',$admin,'</div>';
-
-/* Fim */
-
-echo $nome,'<br/>',$cpf,'<br/>',$nascimento,'<br/>', $usuario,'<br/>', $funcao,'<br/>', $senha,'<br/>', $email,'<br/>', $telefone,'<br/>';
-
     $sql =  $pdo->prepare("INSERT INTO funcionarios SET nome = '$nome', cpf = '$cpf', nascimento = '$nascimento', usuario = '$usuario', funcao = '$funcao', senha = '$senha', email = '$email', telefone = '$telefone', administrador = '$admin', empresa ='$empresa'") ;
     $sql->execute();
 

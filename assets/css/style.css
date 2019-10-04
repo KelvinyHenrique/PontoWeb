@@ -1634,7 +1634,7 @@ table tr td{
       font-size: 25px;
       padding-left: 50px;
       padding-top: 20px;
-      background-color: #4b4949;
+      background-color: black;
   }
 
   .tabela-turnos tr td {
@@ -1668,7 +1668,7 @@ table tr td{
         position: absolute;
         margin: 10px 10px 10px 50px;
         display: none;
-        transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;[]
+        transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
     }
     
     .box-table-opt button {
@@ -1689,12 +1689,13 @@ table tr td{
         margin-top: 25px;
         margin-left: 25px;
         width: 40%;
-        height: 40%;
+        height: 35%;
         position: absolute;
-        background-color: #009DFF;
-        transition-duration: 1s;
-        padding-left: 30px;
-        padding-top: 30px;
+        background-color: #383737;
+        padding: 10px;
+        display: flex;
+        color: #FFFFFF;
+
     }
 
     .botoesturnos {
@@ -1713,13 +1714,89 @@ table tr td{
         pointer-events: none;
       }
 
-    .in-putin-turnos input {
-        width: 80%;
+    
+      .remover-turnos {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+    .in-putin-turnos select {
+        width: 90%;
         height: 100%;
+        margin-top: 5px;
+    }
+
+    .in-putin-turnos input {
+        width: 90%;
+        height: 87%;
+        margin-top: 5px;
     }
       
 
     .in-putin-turnos {
-        width: 90%;
-        height: 25%;
+        width: 100%;
+        height: 30%;
+    }
+
+
+    .box-cadastro-turnos {
+        display: flex;
+        width: 100%;
+        height: 30%;
+    }
+
+    .turnos-box-inputins {
+        width: 50%;
+        height: 100%;
+    }
+
+    .turnos-botao-cadastrar {
+        width: 100%;
+        height: 10%;
+    }
+    
+    .formenviarturnos {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .turnos-botao-cadastrar button {
+        width: 130px;
+        height: 100%;
+        background-color: #F55D3E; 
+        border: none;
+        color: #FFFFFF;
+       
+    }
+
+    .turnos-botao-cadastrar {
+         display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-close {
+        width: 47px;
+        height: 27px;
+        font-size: 20px;
+        color: #FFFFFF;
+        background-color: #FF1248;
+        text-align: center;
+        border: NONE;
+    }
+
+    #adicionarturno {
+        background-color: #0D0106;
+        border: none;
+        color: #FFFFFF;
+        font-size: 16px;
+    }
+
+    #adicionarturno:hover {
+        background-color: #FFFFFF;
+        border: 1px solid black;
+        color: #000000;
+        cursor: pointer;
     }

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body>
+<body onload="remover()">
     <div class="conteiner">
         <div class="conteiner-alinhamento-center">
             <div class="menulateral">
@@ -43,33 +43,99 @@
             </div>
             <div class="bodyturnos">
                 <div class="barra-superior-horas">
-                    <div class="botoesturnos" >
-                        <button class="icon-btn" id="adicionarturno" onclick="ocultar()">Adicionar Turno</button>
+                    <div class="botoesturnos">
+                        <button class="icon-btn" id="adicionarturno" onclick="mostrar()">Adicionar Turno</button>
                     </div>
                 </div>
                 <div class="box-cadastrar-turnos" id="turnoempresa">
-                    
+                    <form class="formenviarturnos">
                     <div class="box-cadastro-turnos">
-                        <div>Nome:</div>
-                    <div class="in-putin-turnos"><input type="text"></div>
-                    <div>Código</div>
-                    <div class="in-putin-turnos"><input type="text"></div>
+                        <div class="turnos-box-inputins">
+                            <div>Nome:</div>
+                            <div class="in-putin-turnos"><input type="text"></div>
+                        </div>
+                        <div class="turnos-box-inputins">
+                            <div>Código</div>
+                            <div class="in-putin-turnos"><input type="text"></div>
+                        </div>
                     </div>
-                    
-                    <div  class="box-cadastro-turnos">
-                          <div>Inicio</div>
-                    <div class="in-putin-turnos"><input type="text"></div>
-                    <div>Pausa</div>
-                    <div class="in-putin-turnos"><input type="text"></div>
+                    <div class="box-cadastro-turnos">
+                        <div class="turnos-box-inputins">
+                            <div>Inicio</div>
+                            <div class="in-putin-turnos">
+                                <select name="" id="">
+                                    <option value="">Selecione</option>
+                                    <option value="">08:30:00</option>
+                                    <option value="">08:45:00</option>
+                                    <option value="">09:00:00</option>
+                                    <option value="">11:00:00</option>
+                                    <option value="">11:10:00</option>
+                                    <option value="">10:40:00</option>
+                                    <option value="">18:00:00</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="turnos-box-inputins">
+                            <div>Pausa</div>
+                            <div class="in-putin-turnos">
+                                <select name="" id="">
+                                    <option value="">Selecione</option>
+                                    <option value="">10:00:00</option>
+                                    <option value="">10:30:00</option>
+                                    <option value="">11:00:00</option>
+                                    <option value="">11:30:00</option>
+                                    <option value="">12:00:00</option>
+                                    <option value="">12:30:00</option>
+                                    <option value="">12:45:00</option>
+                                    <option value="">12:40:00</option>
+                                    <option value="">13:00:00</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                  
-                    <div  class="box-cadastro-turnos">
-                         <div>Retorno</div>
-                    <div class="in-putin-turnos"><input type="text"></div>
-                    <div>Pausa</div>
-                    <div class="in-putin-turnos"><input type="text"></div>
+                    <div class="box-cadastro-turnos">
+                        <div class="turnos-box-inputins">
+                            <div>Retorno</div>
+                            <div class="in-putin-turnos">
+                                <select name="" id="">
+                                    <option value="">Selecione</option>
+                                    <option value="">12:00:00</option>
+                                    <option value="">12:30:00</option>
+                                    <option value="">13:00:00</option>
+                                    <option value="">13:30:00</option>
+                                    <option value="">14:00:00</option>
+                                    <option value="">14:30:00</option>
+                                    <option value="">15:00:00</option>
+                                    <option value="">15:30:00</option>
+                                    <option value="">16:00:00</option>
+                                </select>
+
+                            </div>
+                        </div>
+                        <div class="turnos-box-inputins">
+                            <div>Pausa</div>
+                            <div class="in-putin-turnos">
+                                <select name="" id="">
+                                    <option value="">Selecione</option>
+                                    <option value="">10:30:00</option>
+                                    <option value="">18:30:00</option>
+                                    <option value="">19:00:00</option>
+                                    <option value="">12:30:00</option>
+                                    <option value="">12:40:00</option>
+                                    <option value="">13:10:00</option>
+                                </select>
+
+                            </div>
+                        </div>
+                        
                     </div>
-                   
+                    <div class="turnos-botao-cadastrar">
+                            <button>Enviar</button>
+                        </div>
+                    </form>
+                    <div class="turnos-botao-fechar">
+                        <button class="btn-close" onclick="ocultar()">X</button>
+                    </div>
                 </div>
                 <div class="info-turnos">
                     <div class="table-info-turnos">

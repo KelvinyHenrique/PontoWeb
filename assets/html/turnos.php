@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
+
 <body onload="remover()">
     <div class="conteiner">
         <div class="conteiner-alinhamento-center">
@@ -48,47 +49,47 @@
                     </div>
                 </div>
                 <div class="box-cadastrar-turnos" id="turnoempresa">
-                    <form class="formenviarturnos">
+                    <form class="formenviarturnos" action="../php/cadturnos.php" method="POST">
                     <div class="box-cadastro-turnos">
                         <div class="turnos-box-inputins">
                             <div>Nome:</div>
-                            <div class="in-putin-turnos"><input type="text"></div>
+                            <div class="in-putin-turnos"><input name="nome" type="text"></div>
                         </div>
                         <div class="turnos-box-inputins">
                             <div>Código</div>
-                            <div class="in-putin-turnos"><input type="text"></div>
+                            <div class="in-putin-turnos"><input  name="cod" type="text"></div>
                         </div>
                     </div>
                     <div class="box-cadastro-turnos">
                         <div class="turnos-box-inputins">
                             <div>Inicio</div>
                             <div class="in-putin-turnos">
-                                <select name="" id="">
-                                    <option value="">Selecione</option>
-                                    <option value="">08:30:00</option>
-                                    <option value="">08:45:00</option>
-                                    <option value="">09:00:00</option>
-                                    <option value="">11:00:00</option>
-                                    <option value="">11:10:00</option>
-                                    <option value="">10:40:00</option>
-                                    <option value="">18:00:00</option>
+                                <select name="inicio" id="">
+                                    <option value="0">Selecione</option>
+                                    <option value="08:30:00">08:30:00</option>
+                                    <option value="08:45:00">08:45:00</option>
+                                    <option value="09:00:00">09:00:00</option>
+                                    <option value="11:00:00">11:00:00</option>
+                                    <option value="11:10:00">11:10:00</option>
+                                    <option value="10:40:00">10:40:00</option>
+                                    <option value="18:00:00">18:00:00</option>
                                 </select>
                             </div>
                         </div>
                         <div class="turnos-box-inputins">
                             <div>Pausa</div>
                             <div class="in-putin-turnos">
-                                <select name="" id="">
+                                <select name="pausa" id="">
                                     <option value="">Selecione</option>
-                                    <option value="">10:00:00</option>
-                                    <option value="">10:30:00</option>
-                                    <option value="">11:00:00</option>
-                                    <option value="">11:30:00</option>
-                                    <option value="">12:00:00</option>
-                                    <option value="">12:30:00</option>
-                                    <option value="">12:45:00</option>
-                                    <option value="">12:40:00</option>
-                                    <option value="">13:00:00</option>
+                                    <option value="10:00:00">10:00:00</option>
+                                    <option value="10:30:00">10:30:00</option>
+                                    <option value="11:00:00">11:00:00</option>
+                                    <option value="11:30:00">11:30:00</option>
+                                    <option value="12:00:00">12:00:00</option>
+                                    <option value="12:30:00">12:30:00</option>
+                                    <option value="12:45:00">12:45:00</option>
+                                    <option value="12:40:00">12:40:00</option>
+                                    <option value="13:00:00">13:00:00</option>
                                 </select>
                             </div>
                         </div>
@@ -97,17 +98,17 @@
                         <div class="turnos-box-inputins">
                             <div>Retorno</div>
                             <div class="in-putin-turnos">
-                                <select name="" id="">
+                                <select name="retorno" id="">
                                     <option value="">Selecione</option>
-                                    <option value="">12:00:00</option>
-                                    <option value="">12:30:00</option>
-                                    <option value="">13:00:00</option>
-                                    <option value="">13:30:00</option>
-                                    <option value="">14:00:00</option>
-                                    <option value="">14:30:00</option>
-                                    <option value="">15:00:00</option>
-                                    <option value="">15:30:00</option>
-                                    <option value="">16:00:00</option>
+                                    <option value="12:00:00">12:00:00</option>
+                                    <option value="12:30:00">12:30:00</option>
+                                    <option value="13:00:00">13:00:00</option>
+                                    <option value="13:30:00">13:30:00</option>
+                                    <option value="14:00:00">14:00:00</option>
+                                    <option value="14:30:00">14:30:00</option>
+                                    <option value="15:00:00">15:00:00</option>
+                                    <option value="15:30:00">15:30:00</option>
+                                    <option value="16:00:00">16:00:00</option>
                                 </select>
 
                             </div>
@@ -115,14 +116,14 @@
                         <div class="turnos-box-inputins">
                             <div>Pausa</div>
                             <div class="in-putin-turnos">
-                                <select name="" id="">
+                                <select name="saida" id="">
                                     <option value="">Selecione</option>
-                                    <option value="">10:30:00</option>
-                                    <option value="">18:30:00</option>
-                                    <option value="">19:00:00</option>
-                                    <option value="">12:30:00</option>
-                                    <option value="">12:40:00</option>
-                                    <option value="">13:10:00</option>
+                                    <option value="10:30:00">10:30:00</option>
+                                    <option value="18:30:00">18:30:00</option>
+                                    <option value="19:00:00">19:00:00</option>
+                                    <option value="12:30:00">12:30:00</option>
+                                    <option value="12:40:00">12:40:00</option>
+                                    <option value="13:10:00">13:10:00</option>
                                 </select>
 
                             </div>

@@ -81,4 +81,5 @@ if(isset($_SESSION['ponto']) && empty($_SESSION['ponto']) == false){
     echo "Não foi encontrado nenhuma sessão logada";
     exit;
 }
+
 ?>

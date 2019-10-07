@@ -13,6 +13,8 @@
 <body onload="remover()">
     <div class="conteiner">
         <div class="conteiner-alinhamento-center">
+
+        <!-- INICIO MENU LATERAL -->
             <div class="menulateral">
                 <a href="admin.html">
                     <div class="logoempresa"><img src="../imagens/icons/circular-clock.svg" alt=""></div>
@@ -42,6 +44,7 @@
                     <div class="icon-menu-bar-direita"><img src="../imagens/icons/shut-down-icon.svg" alt=""></div>
                 </a>
             </div>
+                <!-- FIM MENU LATERAL -->
             <div class="bodyturnos">
                 <div class="barra-superior-horas">
                     <div class="botoesturnos">
@@ -138,6 +141,7 @@
                         <button class="btn-close" onclick="ocultar()">X</button>
                     </div>
                 </div>
+
                 <div class="info-turnos">
                     <div class="table-info-turnos">
                         <div class="titulo-turnos">TURNOS</div>
@@ -155,13 +159,23 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                <?php 
+                    require '../php/config.php';
+                    $sql = $pdo->prepare("SELECT * FROM turnos");
+                    $sql->execute();
+                    if($sql->rowCount() > 0) {
+                        foreach($turnos_resultado = $sql->fetchAll() as $dados_turnos) {
+                        
+                            ?>
+
+
                                     <tr>
-                                        <td>Turnos 1</td>
-                                        <td>23</td>
-                                        <td>8:30:00</td>
-                                        <td>12:00:00</td>
-                                        <td>14:00:00</td>
-                                        <td>18:30:00</td>
+                                        <td><?php echo $dados_turnos['nome'];?></td>
+                                        <td><?php echo $dados_turnos['codigo'];?></td>
+                                        <td><?php echo $dados_turnos['entrada'];?></td>
+                                        <td><?php echo $dados_turnos['pausa'];?></td>
+                                        <td><?php echo $dados_turnos['volta'];?></td>
+                                        <td><?php echo $dados_turnos['saida'];?></td>
                                         <td>
                                             <div>
                                                 <button class="botao-acoes-table">
@@ -174,22 +188,7 @@
                                             </div>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>Turnos 1</td>
-                                        <td>23</td>
-                                        <td>8:30:00</td>
-                                        <td>12:00:00</td>
-                                        <td>14:00:00</td>
-                                        <td>18:30:00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Turnos 1</td>
-                                        <td>23</td>
-                                        <td>8:30:00</td>
-                                        <td>12:00:00</td>
-                                        <td>14:00:00</td>
-                                        <td>18:30:00</td>
-                                    </tr>
+                                    <?php }} ?>
                                 </tbody>
                             </table>
                         </div>

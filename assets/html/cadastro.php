@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -8,6 +8,7 @@
     <title>Cadastro de Funcionarios</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/admin.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 </head>
 
 <body>
@@ -48,6 +49,8 @@
                             <label for="sim">Sim</label>
                             <input type="checkbox" id="scales" name="caixas[]" value="2" checked>
                             <label for="nao">Não</label>
+
+                            
                         </div>
                     </div>
                 </div>
@@ -63,5 +66,13 @@
     </div>
 
 </body>
+<script>
+var inputs = $('[type="checkbox"]'); // colocar os inputs em cache
+inputs.on('click', function() { // juntar auscultador de evento
+    inputs.get().forEach(function(el) { // iterar com a array nativa
+        el.checked = el == this && this.checked; // marcar ou desmarcar o elemento iterado
+    }, this);
+});
+</script>
 
 </html>

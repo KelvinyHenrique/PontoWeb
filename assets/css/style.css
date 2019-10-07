@@ -1781,6 +1781,7 @@ table tr td{
         width: 47px;
         height: 27px;
         font-size: 20px;
+        font-weight: bold;
         color: #FFFFFF;
         background-color: #FF1248;
         text-align: center;
@@ -1794,7 +1795,7 @@ table tr td{
         font-size: 16px;
     }
 
-    #adicionarturno:hover {
+    #adicionartu-rno:hover {
         background-color: #FFFFFF;
         border: 1px solid black;
         color: #000000;

@@ -39,7 +39,7 @@ if(isset($_POST['valorbotao'])){
         <div class="alinhamentoempresa">
         <div class="cadastroempresa alinhamentoempresa2" id="alinhamentoempresa2">
             <form class="formcadastroempresa" method="POST" action="../php/cadastroempresa.php">
-                        <div class="titulocadastro">CADASTRO</div>
+                     48263590+lcfirst
             <div class="boxinputs">
             <div class="rzsocial"><input type="text" placeholder="Razão Social" name="rz_social"></div>
             <div class="cnpjempresa"><input type="text" placeholder="CNPJ" name="cnpj"></div>
@@ -63,9 +63,9 @@ if(isset($_POST['valorbotao'])){
                 <option value="15">15</option>
                 <option value="16">16</option>
                 <option value="17">17</option>
-                <option value="">18</option>
-                <option value="">19</option>
-                <option value="">20</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
                 </select>
             </div>
             </div>

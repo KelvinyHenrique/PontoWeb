@@ -328,15 +328,11 @@ p {
 
 /* Cadastro de Usuários */
 .box-form-01 {
-    width: 100%;
-    top:50%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
+    width: 96%;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .box-11-form {
@@ -349,28 +345,29 @@ p {
 }
 
 .box-cadastro .telefone {
-    width: 63.5%;
+    width: 30%;
 }
 
 .box-cadastro input {
     width: 30%;
-    height: 72px;
+    height: 50px;
     margin-bottom: 50px;
-    font-size: 30px;
     margin-left: 27px;
     margin-right: 27px;
+    border-radius: 4px;
+    padding-left: 5px;
+    border: 1px solid rgb(49, 49, 49);
 }
 
 ::-webkit-input-placeholder {
-    color: #000000;
-    font-size: 30px;
+    color: #353535;
     font-family: 'Bahnschrift Regular';
     text-align: left;
     
 }
 
 .upload-arquivos img {
-    width: 80px;
+    width: 50px;
 }
 
 .upload-arquivos {
@@ -385,13 +382,13 @@ p {
     display: flex;
 }
 .upload-box-icons button {
-    width: 300px;
-    height: 104px;
+    width: 200px;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: #ffffff;
-    font-size: 30px;
+    font-size: 20px;
     font-family: 'Bahnschrift Regular';
     border: none;
 
@@ -406,28 +403,14 @@ p {
     background-color: #008A55;
 }
 
-.titulo-cadastro {
-    width: 745px;
-    height: 75px;
-    border-radius: 35px;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
-    font-family: 'Bahnschrift Regular';
-    margin-bottom: 130px;
-}
-
 .checkboxcadastro{
-    font-size: 40px;
+    font-size: 20px;
     font-family: 'Bahnschrift Regular';
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 734px;
-    height: 50px;
-    border-radius: 35px;
+    width: 400px;
+    height: 20px;
     background-color: #9F4300;
     color: #ffffff;
     padding: 20px;
@@ -447,20 +430,52 @@ p {
 }
 
 .botaocadastrar input {
-    width: 415px;
-    height: 88px;
-    border-radius: 44px;
+    width: 250px;
+    height: 50px;
+    border-radius: 4px;
     background-color: #B4000F;
     border: none;
-    font-size: 40px;
+    font-size: 23px;
     color: #ffffff;
     font-family: 'Bahnschrift Regular';
     outline: thin dotted;
     outline: 0px auto -webkit-focus-ring-color;
     outline-offset: 0px;
-    margin-top: 150px;
+    margin-top: 20px;
 }
 
+.box-turnos-funcionario {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    margin-left: 27px;
+    color: #FFFFFF;
+    
+}
+
+#select-cadfuncionarios {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 30%;
+    height:50px;
+    border-radius: 5px;
+    border: 1px solid rgb(49, 49, 49);
+}
+
+#select-cadfuncionarios option {
+    font-size: 15px;
+    font-family: 'Bahnschrift Regular';
+}
+
+.titulonavbar {
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
 
 /* Pagina de Registro de Ponto */
 
@@ -1561,13 +1576,14 @@ table tr td{
         height: 60px;
     }
 
-    .barra-superior-horas {
+    .navbar-topo {
         width: 100%;
         height: 7%;
         background-color: #ffffff;
         display: flex;
         align-items: center;
         flex-direction: row;
+        margin-bottom: 10px;
     }
 
     .botoesturnos {
@@ -1575,6 +1591,7 @@ table tr td{
         align-items: center;
         flex-direction: row;
         margin-left: 50px;
+        width: 100%;
     }
 
     .btn-actions{
@@ -1699,7 +1716,7 @@ table tr td{
     }
 
     .botoesturnos {
-        width: 10%;
+        width: 20%;
         height: 80%;
     }
 

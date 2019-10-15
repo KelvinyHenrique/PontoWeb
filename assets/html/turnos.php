@@ -46,7 +46,7 @@
             </div>
                 <!-- FIM MENU LATERAL -->
             <div class="bodyturnos">
-                <div class="barra-superior-horas">
+                <div class="navbar-topo">
                     <div class="botoesturnos">
                         <button class="icon-btn" id="adicionarturno" onclick="mostrar()">Adicionar Turno</button>
                     </div>

@@ -477,6 +477,20 @@ p {
     flex-direction: row;
 }
 
+.cad-func-empresa {
+    font-size: 15px;
+    font-family: 'Bahnschrift Regular';
+    padding-bottom: 10px;
+    width: 30%;
+    height:55px;
+    border-radius: 5px;
+    border: 1px solid rgb(49, 49, 49);
+    padding-left: 5px;
+    padding: 1px;
+    font-weight: 500;
+}
+
+
 /* Pagina de Registro de Ponto */
 
 .body-contagem-ponto {
@@ -1299,6 +1313,26 @@ table tr td{
 
 /* Informaçoes Empresas */
 
+.titulocadastrodeempresa {
+    color: #FFFFFF;
+    margin-top: 15px;
+    font-size: 25px;
+}
+
+.conteiner-box-empresa-menu-lateral-alinhamento {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    top:50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.conteiner-box-empresa-menu-lateral-content {
+    width: 100%;
+}
+
 .formularioempresas {
     display: flex;
     align-items: center;
@@ -1583,7 +1617,6 @@ table tr td{
         display: flex;
         align-items: center;
         flex-direction: row;
-        margin-bottom: 10px;
     }
 
     .botoesturnos {
@@ -1818,3 +1851,30 @@ table tr td{
         color: #000000;
         cursor: pointer;
     }
+
+    /* NAVBARS */
+
+    .navbar-black {
+        width: 100%;
+        height: 7%;
+        background-color: #333333;
+    }
+
+    /* Administradores */ 
+
+
+    .conteiner-box-administradores {
+        width: 90%;
+        height:90%;
+        background-color: #8d8d8d;
+    }
+
+    .conteiner-box-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+    }
+

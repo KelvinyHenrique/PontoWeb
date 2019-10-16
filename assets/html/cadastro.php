@@ -65,15 +65,17 @@
                 </div>
                 <div class="box-cadastro">
                     <input type="email" placeholder="Email" name="email" required>
-                    <select name="" id="">
-                        <option value="">
+                    <select name="empresa" class="cad-func-empresa">
                             <?php 
+                            
                                 require '../php/config.php';
-                                $sql 
-                            ?>
-                        </option>
+                                $sql = $pdo->prepare("SELECT * FROM empresas");
+                                $sql->execute();
+                                if($sql->rowCount() > 0) {
+                                    foreach($nometurnos = $sql->fetchAll() as $resultadopesquisaempresa) {
+                                         ?>
+                                        <option value="<?php echo $resultadopesquisaempresa['rz_social']; ?>"><?php echo $resultadopesquisaempresa['rz_social'];  ?></option> <?php }} ?>
                     </select>
-                    <input type="text" placeholder="Empresa" name="empresa" required>
                     <input type="text" name="telefone" maxlength="12" placeholder="Telefone" OnKeyPress="formatar('# ####-####', this)">
                 </div>
                 <div class="box-turnos-funcionario">
@@ -87,7 +89,7 @@
                         if ($sql->rowCount() > 0) {
                             foreach($dadosturnos = $sql->fetchAll() as $resultadopesquisa ) {
                         ?>
-                        <option value=""><?php echo $resultadopesquisa['nome']; ?></option> <?php }} ?>
+                        <option value="<?php echo $resultadopesquisa['nome']; ?>"><?php echo $resultadopesquisa['nome']; ?></option> <?php }} ?>
                     </select>
                 </div>
                 <div class="upload-arquivos">

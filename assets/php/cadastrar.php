@@ -9,6 +9,7 @@ $senha = $_POST['senha'];
 $email = $_POST['email'];
 $telefone = $_POST['telefone'];
 $empresa = $_POST['empresa'];
+$turno = $_POST['turnos'];
 
 /* Faz a verificação se o usuario é administrador ou não */
 $_checkbox = $_POST['caixas'];
@@ -22,7 +23,7 @@ if ($dadocheck > 1) {
 } else {
     $admin = 1;
 }
-    $sql =  $pdo->prepare("INSERT INTO funcionarios SET nome = '$nome', cpf = '$cpf', nascimento = '$nascimento', usuario = '$usuario', funcao = '$funcao', senha = '$senha', email = '$email', telefone = '$telefone', administrador = '$admin', empresa ='$empresa'") ;
+    $sql =  $pdo->prepare("INSERT INTO funcionarios SET nome = '$nome', cpf = '$cpf', nascimento = '$nascimento', usuario = '$usuario', funcao = '$funcao', senha = '$senha', email = '$email', telefone = '$telefone', administrador = '$admin', empresa ='$empresa', turno = '$turno'") ;
     $sql->execute();
 
 ?>

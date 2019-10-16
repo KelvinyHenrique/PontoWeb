@@ -36,38 +36,6 @@
 
 
                 </div>
-                <div class="quadradoshoras">
-                    <div class="conteiner">
-                      <div class="resumododia">
-                    <div> 
-                        <p> Resumo do dia <?php echo date('d/m/y'); ?></p>
-                    </div>
-                    
-                </div>
-                  
-                       
-                    </div>
-                    <div class="informacoeshoras">
-                        <div class="horasextras">
-                            <p>+24</p>
-                            <p>EXTRAS</p>
-                        </div>
-                        <div class="totalhoras">
-                            <p>+820H</p>
-                            <p>TOTAL</p>
-                        </div>
-                        <div class="totalfaltas">
-                            <p>10</p>
-                            <p>FALTAS</p>
-                        </div>
-                        <div class="totalatestados">
-                            <p>1</p>
-                            <p>ATESTADOS</p>
-                        </div>
-                    </div>
-
-                </div>
-
                  <?php 
                  require "../php/config.php";
                  if(isset($_POST['pesquisanomefuncionario']) && isset($_POST['datafinal']) && empty($_POST['datainicial']) == false && empty($_POST['datafinal']) == false) {

@@ -1,12 +1,10 @@
 <?php 
 require '../php/config.php';
-$botaofuncionario='';
 if(isset($_POST['funcionario'])){
     $botaofuncionario = $_POST['funcionario'];
     $sql = $pdo->prepare("SELECT * FROM funcionarios WHERE id = :botaofuncionario");
     $sql->bindValue(":botaofuncionario", $botaofuncionario);
     $sql->execute();
-
     // VARIAVEIS INFORMAÇÕES 
     if ($sql->rowCount() > 0) {
         $infofuncionario = $sql->fetch();
@@ -21,19 +19,16 @@ if(isset($_POST['funcionario'])){
         $pinuser =  $infofuncionario['pin']; 
         $cpfuser = $infofuncionario['cpf'];
         setcookie("funcionario", $idfuncionarioperfil);
+        $previanome = $nomefuncionario;
+        list($nome, $sobrenome) = explode(' ', $previanome, 3);
     }
     else {
         header("Location: funcionarios.php");
     }
-
 }     else {
     header("Location: funcionarios.php");
 }
-
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -54,9 +49,9 @@ if(isset($_POST['funcionario'])){
                         <img src="../imagens/icons/perfil/boy.svg" alt="">
                     </div>
                     <div class="prev-infos">
-                        <h3><?php echo $nomefuncionario ?></h3>
-                        <h3><?php echo $funcao ?></h3>
-                        <h3><?php echo $empresa ?></h3>
+                        <h3><?php echo $nome." ".$sobrenome;?></h3>
+                        <h3><?php echo $funcao; ?></h3>
+                        <h3><?php echo $empresa; ?></h3>
                     </div>
                 </div>
                 <div class="box-info-perf">
@@ -68,7 +63,7 @@ if(isset($_POST['funcionario'])){
                         <p>Usuario:<?php echo " ".$usuario ?></p>
                         <p>PIN:<?php echo " ".$pinuser ?></p>
                         <p>CPF:<?php echo " ".$cpfuser ?></p>
-                        <div class="botaoeditar">
+                        <div class="botao-editar">
                             <button class="botaoeditar2">Editar</button>
                         </div>
 

@@ -91,6 +91,8 @@
                         ?>
                         <option value="<?php echo $resultadopesquisa['nome']; ?>"><?php echo $resultadopesquisa['nome']; ?></option> <?php }} ?>
                     </select>
+
+                    <input type="password" placeholder="PIN" name="pin" required>
                 </div>
                 <div class="upload-arquivos">
                     <div class="upload-box-icons">

@@ -36,7 +36,7 @@
                         <a href="cadastro.php">
                             <div class="icon-menu-bar-direita"><img src="../imagens/icons/add-user.svg" alt=""></div>
                         </a>
-                        <a href="turnos.html">
+                        <a href="turnos.php">
                             <div class="icon-menu-bar-direita"><img src="../imagens/icons/settings.svg" alt=""></div>
                         </a>
                         <a href="sair.php">
@@ -47,10 +47,45 @@
         
                         <div class="conteiner-box-empresa-menu-lateral-content">
                             <div class="conteiner-box-body">
-                             <div class="navbar-black">
+                             <div class="navbar-white">
+                               <div class="conteudo-navbar-admin"> <h1>Administração</h1></div> 
                             </div>
                             
-                                <div class="conteiner-box-administradores">dddddddddddddddddddddddddddddddddddddd <hr/>d</div>
+                                <div class="conteiner-box-administradores">
+                                    <div class="content-box-shawdow">
+                                        <div class="navbar-black">
+                                           <p>Contas de Administradores</p> 
+                                        </div>
+                                        <table class="tabela-administradores">
+                                            <thead>
+                                                <tr>
+                                                    <th>Nome</th>
+                                                    <th>Usuário</th>
+                                                    <th>Email</th>
+                                                    <th>Nível de Privilégios</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+
+                                        <?php 
+                                        require '../php/config.php';
+                                        $sql = $pdo->prepare("SELECT nome, usuario, email, administrador  FROM funcionarios WHERE administrador = '1'");
+                                        $sql->execute();
+                                        if ($sql->rowCount() > 0) {
+                                            foreach ($pesquisafuncionario = $sql->fetchAll() as $valorpesquisaadministradores) {                                             
+                                                ?>
+                                                <tr>
+                                                <td><?php echo $valorpesquisaadministradores['nome']; ?></td>
+                                                <td><?php echo $valorpesquisaadministradores['usuario']; ?></td>
+                                                <td><?php echo $valorpesquisaadministradores['email']; ?></td>
+                                                <td><?php echo $valorpesquisaadministradores['administrador']; ?></td>
+                                                </tr>
+                                                <?php }}?>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                           
                             </div>
                            

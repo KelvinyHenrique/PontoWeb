@@ -12,7 +12,44 @@
 
 
 <body>
-    <div class="conteiner">
+
+      <!-- INICIO MENU LATERAL -->
+     
+      <div class="conteiner-box-empresa-menu-lateral-alinhamento">
+                <div class="menulateral">
+                        <a href="admin.html">
+                            <div class="logoempresa"><img src="../imagens/icons/circular-clock.svg" alt=""></div>
+                        </a>
+                        <a href="funcionarios.php">
+                            <div class="icon-menu-bar-direita"><img src="../imagens/icons/group.svg" alt=""></div>
+                        </a>
+                        <a href="horas.php">
+                            <div class="icon-menu-bar-direita"><img src="../imagens/icons/databaseleftbar.svg" alt=""></div>
+                        </a>
+                        <a href="empresas.php">
+                            <div class="icon-menu-bar-direita"><img src="../imagens/icons/skyline.svg" alt=""></div>
+                        </a>
+                        <a href="administradores.php">
+                            <div class="icon-menu-bar-direita"><img src="../imagens/icons/manager.svg" alt=""></div>
+                        </a>
+                        <a href="backup.html">
+                            <div class="icon-menu-bar-direita"><img src="../imagens/icons/hard-drive.svg" alt=""></div>
+                        </a>
+                        <a href="cadastro.php">
+                            <div class="icon-menu-bar-direita"><img src="../imagens/icons/add-user.svg" alt=""></div>
+                        </a>
+                        <a href="turnos.php">
+                            <div class="icon-menu-bar-direita"><img src="../imagens/icons/settings.svg" alt=""></div>
+                        </a>
+                        <a href="sair.php">
+                            <div class="icon-menu-bar-direita"><img src="../imagens/icons/shut-down-icon.svg" alt=""></div>
+                        </a>
+                    </div>
+                        <!-- FIM MENU LATERAL -->
+
+
+
+    <div class="conteiner-box-empresa-menu-lateral-content">
         <div class="bancodehoras">
             <div class="divbodyhoras">
                 <div class="pesquisatopo">
@@ -151,6 +188,7 @@ $horasextras = $horasTrabalhadas - 8;
             </div>
         </div>
 
+    </div>
     </div>
 
 </body>

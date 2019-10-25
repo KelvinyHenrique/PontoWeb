@@ -11,33 +11,65 @@
 </head>
 
 <body>
-    <div class="conteiner">
-
-        <div class="body-funcionarios-li">
-
-            <div class="topo-funcionarios">
-                <div class="titulo-funcionarios">
-                    <h3>Lista de Funcionarios</h3>
-                </div>
-                <div class="pesquisa-funcionarios">
-                    <div class="info-funcionarios">
-                        <div class="menu-ativado-green">
-                            <div class="circulo-ativo"></div>
-                            <div class="texto-ativos">Ativos</div>
-                        </div>
-                        <div class="menu-desativado-red">
-                            <div class="circulo-desativados"></div>
-                            <div class="texto-desativado">Desativados</div>
-                        </div>
+        <!-- INICIO MENU LATERAL -->
+     
+        <div class="conteiner-box-empresa-menu-lateral-alinhamento">
+                <div class="menulateral">
+                        <a href="admin.html">
+                            <div class="logoempresa"><img src="../imagens/icons/circular-clock.svg" alt=""></div>
+                        </a>
+                        <a href="funcionarios.php">
+                            <div class="icon-menu-bar-direita"><img src="../imagens/icons/group.svg" alt=""></div>
+                        </a>
+                        <a href="horas.php">
+                            <div class="icon-menu-bar-direita"><img src="../imagens/icons/databaseleftbar.svg" alt=""></div>
+                        </a>
+                        <a href="empresas.php">
+                            <div class="icon-menu-bar-direita"><img src="../imagens/icons/skyline.svg" alt=""></div>
+                        </a>
+                        <a href="administradores.php">
+                            <div class="icon-menu-bar-direita"><img src="../imagens/icons/manager.svg" alt=""></div>
+                        </a>
+                        <a href="backup.html">
+                            <div class="icon-menu-bar-direita"><img src="../imagens/icons/hard-drive.svg" alt=""></div>
+                        </a>
+                        <a href="cadastro.php">
+                            <div class="icon-menu-bar-direita"><img src="../imagens/icons/add-user.svg" alt=""></div>
+                        </a>
+                        <a href="turnos.php">
+                            <div class="icon-menu-bar-direita"><img src="../imagens/icons/settings.svg" alt=""></div>
+                        </a>
+                        <a href="sair.php">
+                            <div class="icon-menu-bar-direita"><img src="../imagens/icons/shut-down-icon.svg" alt=""></div>
+                        </a>
                     </div>
-                    <div class="pesquisa-input-funcionarios">
-                        <div><input type="search" placeholder="Pesquisar"></div>
-                        <div class="icon-advanced-func"><img src="../imagens/icons/connecting-points.svg" alt=""></div>
-                    </div>
-                </div>
-            </div>
+                        <!-- FIM MENU LATERAL -->
+    
+    <div class="bodyturnos">
+        <div class="navbar-white">
+        <div class="topo-funcionarios">
+              
+              <div class="pesquisa-funcionarios">
+                  <div class="info-funcionarios">
+                      <div class="menu-ativado-green">
+                          <div class="circulo-ativo"></div>
+                          <div class="texto-ativos">Ativos</div>
+                      </div>
+                      <div class="menu-desativado-red">
+                          <div class="circulo-desativados"></div>
+                          <div class="texto-desativado">Desativados</div>
+                      </div>
+                  </div>
+                  <div class="pesquisa-input-funcionarios">
+                      <div><input type="search" placeholder="Pesquisar"></div>
+                      <div class="icon-advanced-func"><img src="../imagens/icons/connecting-points.svg" alt=""></div>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="body-funcionarios-li">  
             <div class="conteiner">
-                <hr class="linha" />
                 <?php
 session_start();
 require '../php/config.php';
@@ -86,6 +118,7 @@ if(isset($_SESSION['admin']) && empty($_SESSION['admin']) == false){
 ?>
             </div>
         </div>
+    </div>
     </div>
 </body>
 

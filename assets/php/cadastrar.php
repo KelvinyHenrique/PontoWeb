@@ -10,7 +10,7 @@ $email = $_POST['email'];
 $telefone = $_POST['telefone'];
 $empresa = $_POST['empresa'];
 $turno = $_POST['turnos'];
-$pin = $_POST['pin']
+$pin = $_POST['pin'];
 
 /* Faz a verificação se o usuario é administrador ou não */
 $_checkbox = $_POST['caixas'];

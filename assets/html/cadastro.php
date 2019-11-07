@@ -12,10 +12,9 @@
 
 <body>
     <div class="conteiner">
-    <div class="conteiner-alinhamento-center">
         <!-- INICIO MENU LATERAL -->
         <div class="menulateral">
-                <a href="admin.html">
+                <a href="admin.php">
                     <div class="logoempresa"><img src="../imagens/icons/circular-clock.svg" alt=""></div>
                 </a>
                 <a href="funcionarios.php">
@@ -36,7 +35,7 @@
                 <a href="cadastro.php">
                     <div class="icon-menu-bar-direita"><img src="../imagens/icons/add-user.svg" alt=""></div>
                 </a>
-                <a href="turnos.html">
+                <a href="turnos.php">
                     <div class="icon-menu-bar-direita"><img src="../imagens/icons/settings.svg" alt=""></div>
                 </a>
                 <a href="sair.php">
@@ -45,12 +44,11 @@
             </div>
                 <!-- FIM MENU LATERAL -->
 
-        <div class="box-form-01">
-        <div class="navbar-topo">
-                <div class="botoesturnos">
-                       <div class="titulonavbar">CADASTRAR TURNOS</div>
-                    </div>
+                <div class="navbar-cadastro">
+                    <p>Cadastro</p> 
                 </div>
+
+        <div class="box-form-01">
             <form action="../php/cadastrar.php" class="box-11-form" method="post">
                 <div class="box-cadastro box11">
 
@@ -115,7 +113,6 @@
             </form>
         </div>
 </div>
-    </div>
 </body>
 <script>
 function formatar(mascara, documento){

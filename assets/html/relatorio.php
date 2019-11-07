@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/relatorio.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="../css/relatorio.css">
 </head>
-
 <?php 
 require '../php/config.php';
 if (isset($_POST['datainicial']) && isset($_POST['datafinal']) && empty($_POST['datainicial']) == false && empty($_POST['datafinal']) == false ) {
@@ -55,7 +54,6 @@ else {
 
 ?>
 <body>
-    <div class="conteinerrelatorio">
         <div class="toporelatorio">
             <div>Relatorio de Ponto</div>
             <div class="menutopofuncionariorelatorio">
@@ -72,24 +70,23 @@ else {
                     <p>TURNO: 8:30:00-12:00:00-18:30:00</p>
                 </div>
             </div>
+		</div>
+		
 
-        </div>
 
-        <div class="tabelarelatorioponto">
-            <table class="relatoriopontobody" cellpadding="0" cellspacing="0">
-                <thead>
-                    <tr class="bordastabela">
-                        <th>DIA</th>
-                        <th>ENTRADA</th>
-                        <th>PAUSA</th>
-                        <th>RETORNO</th>
-                        <th>SAÍDA</th>
-                        <th>TOTAL</th>
-                        <th>EXTRA</th>
-                    </tr>
-                </thead>
-
-                <tbody>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+						<th scope="col">DIA</th>
+                        <th scope="col">ENTRADA</th>
+                        <th scope="col">PAUSA</th>
+                        <th scope="col">RETORNO</th>
+                        <th scope="col">SAÍDA</th>
+                        <th scope="col">TOTAL</th>
+                        <th scope="col">EXTRA</th>
+    </tr>
+  </thead>
+  <tbody>
                 <?php
     $sql = $pdo->prepare("SELECT * FROM ponto WHERE data BETWEEN :datainicial AND :datafinal AND funcionario = :informacoesfuncionario");
     $sql->bindValue(":informacoesfuncionario", $informacoesfuncionario);
@@ -105,11 +102,11 @@ else {
        $dadosaida = $resultadopesquisadata['Saida'];
       ?>
                     <tr class="bordastabela">
-                        <td><?php echo $dadosdata;?></td>
-                        <td><?php echo $dadosentrada;?></td>
-                        <td><?php echo $dadospausa;?></td>
-                        <td><?php echo $dadosretorno;?></td>
-                        <td><?php echo $dadosaida;?></td>
+                        <th scope="row"><?php echo $dadosdata;?></th>
+                        <th><?php echo $dadosentrada;?></th>
+                        <th><?php echo $dadospausa;?></th>
+                        <th><?php echo $dadosretorno;?></th>
+                        <th><?php echo $dadosaida;?></th>
                         <?php 
 
 $horaInicial  = strtotime($dadosentrada);
@@ -137,18 +134,14 @@ $horasextras = $horasTrabalhadas - 8;
 
  /*E para que tudo saia num formato bunitinhu...te messa função aí para converter a parada ok...*/
 ?>
-       <td><?php 
+       <th><?php 
        if (empty($resultadopesquisadata['Entrada']) == false && empty($resultadopesquisadata['Pausa']) == false && empty($resultadopesquisadata['Retorno']) == false && empty($resultadopesquisadata['Saida']) == false) {
-           echo $horasTrabalhadas; } ?></td>
-       <td><?php
+           echo $horasTrabalhadas; } ?></th>
+       <th><?php
        if (empty($resultadopesquisadata['Entrada']) == false && empty($resultadopesquisadata['Pausa']) == false && empty($resultadopesquisadata['Retorno']) == false && empty($resultadopesquisadata['Saida']) == false) {
-           echo $horasextras; }} ?></td>
+           echo $horasextras; }} ?></th>
                     </tr>
                 </tbody>
-            </table>
-        </div>
-    </div>
-
+</table>
 </body>
-
 </html>

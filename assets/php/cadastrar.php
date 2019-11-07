@@ -26,5 +26,6 @@ if ($dadocheck > 1) {
 }
     $sql =  $pdo->prepare("INSERT INTO funcionarios SET nome = '$nome', cpf = '$cpf', nascimento = '$nascimento', usuario = '$usuario', funcao = '$funcao', senha = '$senha', email = '$email', telefone = '$telefone', administrador = '$admin', empresa ='$empresa', turno = '$turno', pin = '$pin'") ;
     $sql->execute();
+    header("Location: ../html/cadastro.php");
 
 ?>

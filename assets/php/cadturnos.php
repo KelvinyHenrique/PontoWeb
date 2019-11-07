@@ -13,6 +13,7 @@ $turno_saida = $_POST['saida'];
 
     $sql = $pdo->prepare("INSERT INTO turnos SET nome = '$nome', codigo = '$codigo', entrada = '$turno_inicio', pausa = '$turno_pausa', volta = '$turno_retorno', saida = '$turno_saida'");
     $sql->execute();
+    header("Location: ../html/turnos.php");
 
 } else {
     echo "Não entrou lá";

@@ -1,8 +1,29 @@
-body {
-    background-color: #36AD7C;
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+
+body{
+    background-image: url("../imagens/background-13-01.svg");
+    background-position: center center;
+  
+    /* Background image doesn't tile */
+    background-repeat: no-repeat;
+    
+    /* Background image is fixed in the viewport so that it doesn't move when 
+       the content's height is greater than the image's height */
+    background-attachment: fixed;
+    
+    /* This is what makes the background image rescale based
+       on the container's size */
     background-size: cover;
-    color: #ffffff;
+    
+    /* Set a background color that will be displayed
+       while the background image is loading */
+    background-color: #464646;
+    font-family: 'Staatliches', cursive;
+    font-weight: bold;
+
 }
+
 
 @media (min-width: 1024px){
     .box-01-index {
@@ -28,10 +49,10 @@ body {
     }
 
     .box-01-index button {
-        width: 25%;
-        height: 86%;
+        width: 30%;
+        height: 70%;
         margin: 20px;
-        color: #ffffff;
+        color: #000000;
         font-size: 44px;
         font-family: 'Bahnschrift Regular';
         border: none;
@@ -112,28 +133,72 @@ body {
 
 
 .funcionarios:hover{
-    background-color: #074e68;
+    background-color: #8338EC;
     transform: scale(1.1);
     margin-left: 70px;
     margin-right: 70px;
-    border: 5px solid #042733;
+    border: 5px solid rgb(255, 255, 255);
+    color: #ffffff;
 }
 
 .baterponto:hover {
-    background-color: rgb(189, 17, 37);
+    background-color: #3A86FF;
     transform: scale(1.1);
     margin-left: 70px;
     margin-right: 70px;
-    border: 5px solid rgb(68, 5, 12);
+    border: 5px solid rgb(255, 255, 255);
+    color: #ffffff;
 }
 
 .administracao:hover {
-    background-color: rgb(179, 69, 25);
+    background-color: #FFBE0B;
     transform: scale(1.1);
     margin-left: 70px;
     margin-right: 70px;
-    border: 5px solid rgb(51, 17, 3);
+    border: 5px solid rgb(255, 255, 255);
+    color: #ffffff;
 }
+
+.box-icon-administracao-white {
+    display: none;
+}
+
+.box-icon-ponto-white {
+    display: none;
+}
+
+.box-icon-funcionarios-white {
+    display: none;
+}
+
+
+.administracao:hover .box-icon-administracao-white{
+    display: block;
+}
+.administracao:hover .box-icon-administracao-black {
+    display: none;
+}
+
+.baterponto:hover .box-icon-ponto-black {
+    display: none;
+}
+.baterponto:hover .box-icon-ponto-white {
+    display: block;
+}
+
+.funcionarios:hover .box-icon-funcionarios-black {
+    display: none
+}
+.funcionarios:hover .box-icon-funcionarios-white {
+    display: block
+}
+
+
+
+
+
+
+
 
 @keyframes bounceIn {
     0% {
@@ -148,3 +213,13 @@ body {
       transform: scale(1);
     }
   }
+
+  @media only screen and (max-width:376px) {
+
+    .box-01-index button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+}

@@ -15,7 +15,7 @@ if(isset($_POST['usuario']) && empty($_POST['usuario']) == false){
 
             $sql = $sql->fetch();
             $_SESSION['admin'] = $sql['id'];
-            header("Location: ../html/admin.html");
+            header("Location: ../html/admin.php");
     } else {
       header("Location: ../html/login2.html");
     } 

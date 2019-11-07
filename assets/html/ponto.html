@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -12,20 +11,16 @@
 </head>
 
 <body>
+
     <div class="conteiner">
         <div class="conteiner-ponto">
             <div class="alinhamento-bater-ponto">
-                <div class="ponto-imagem-box">
-                    <div class="ponto-imagem">
-                        <img src="../imagens/icons/perfil/boy.svg" alt="">
-                    </div>
-
-                </div>
+                <span class="clock"></span>
 
                 <div class="ponto-title">
                     <h4>Digite sua senha:</h4>
                 </div>
-                <form action="../php/baterponto.php" method="POST">
+                <form action="../php/ponto.php" method="POST">
                     <div class="input-ponto">
                         <input type="password" id="password-ponto" name="senha">
                         <button class="imgponto" type="submit"><img src="../imagens/icons/right-arrow.svg"
@@ -33,11 +28,11 @@
                     </div>
                 </form>
             </div>
-
-
         </div>
-
     </div>
+    <script type="text/javascript" src="../js/ponto.js">
+    </script>
+    
 </body>
 
 </html>

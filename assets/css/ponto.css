@@ -1,5 +1,265 @@
 body {
-    background-image: url('../imagens/background-05.jpg');
-    background-size: 100%;
-    background-repeat: no-repeat;
+    background-image: url('../imagens/background-05.svg');
+    /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+  
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+  
+  /* Background image is fixed in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+  background-attachment: fixed;
+  
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover;
+  
+  /* Set a background color that will be displayed
+     while the background image is loading */
+  background-color: #464646;
 }
+
+
+/* TESTES */
+
+
+html,body {
+	padding:0;
+	margin:0;
+	text-align:center;
+}
+
+body {
+	padding-top:3em;
+}
+h1,
+h2 {
+	margin-bottom:3rem;
+	font-family:sans-serif;
+	color:#666;
+}
+
+h2 {
+	margin-top:2em;
+}
+
+.clock {
+	position:relative;
+	font-family:monaco,consolas,"courier new",monospace;
+	font-size:3.5rem;
+	line-height:1.375;
+}
+
+.clock:before,
+.clock:after {
+	position:absolute;
+	top:0;
+	bottom:0;
+	content:':';
+	z-index:2;
+	line-height:1.15;
+	color:#ffffff;
+}
+
+.clock:before {
+	left:2.325em;
+}
+
+.clock:after {
+	right:2.325em;
+}
+
+.clock span {
+	position:relative;
+	display:inline-block;
+	padding:0 .25em;
+	margin:0 .06125em;
+	z-index:1;
+
+	-webkit-transform:perspective(750);
+	-moz-transform:perspective(750);
+	-ms-transform:perspective(750);
+	transform:perspective(750);
+
+	-webkit-transform-style:preserve-3d;
+	-moz-transform-style:preserve-3d;
+	-ms-transform-style:preserve-3d;
+	transform-style:preserve-3d;
+}
+
+.clock span:first-child {
+	margin-left:0;
+}
+
+.clock span:last-child {
+	margin-right:0;
+}
+
+.clock span:nth-child(2),
+.clock span:nth-child(4) {
+	margin-right:.3em;
+}
+
+.clock span:nth-child(3),
+.clock span:nth-child(5) {
+	margin-left:.3em;
+}
+
+.clock span:before,
+.clock span:after {
+	position:absolute;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	color: #000000 ;
+	text-shadow:0 1px 0 #fff;
+	background: #ffffff;;
+	border-radius:.125em;
+	outline:1px solid transparent; /* fix jagged edges in ff */
+
+	-webkit-backface-visibility:hidden;
+	-moz-backface-visibility:hidden;
+	-ms-backface-visibility:hidden;
+	backface-visibility:hidden;
+
+	-webkit-transition:-webkit-transform .75s, opacity .75s;
+	-moz-transition:-moz-transform .75s, opacity .75s;
+	-ms-transition:-ms-transform .75s, opacity .75s;
+    transition:transform .75s, opacity .75s;
+    box-shadow: 19px 14px 54px -19px rgba(0,0,0,0.75);
+}
+
+.clock span:before {
+	opacity:1;
+	z-index:1;
+	content:attr(data-old);
+
+	-webkit-transform-origin:0 0;
+	-moz-transform-origin:0 0;
+	-ms-transform-origin:0 0;
+	transform-origin:0 0;
+
+	-webkit-transform:translate3d(0,0,0) rotateX(0);
+	-moz-transform:translate3d(0,0,0) rotateX(0);
+	-ms-transform:translate3d(0,0,0) rotateX(0);
+	transform:translate3d(0,0,0) rotateX(0);
+}
+
+.clock span:after {
+	opacity:0;
+	z-index:2;
+	content:attr(data-now);
+
+	-webkit-transform-origin:0 100%;
+	-moz-transform-origin:0 100%;
+	-ms-transform-origin:0 100%;
+	transform-origin:0 100%;
+
+	-webkit-transform:translate3d(0,-102.5%,0) rotateX(90deg);
+	-moz-transform:translate3d(0,-102.5%,0) rotateX(90deg);
+	-ms-transform:translate3d(0,-102.5%,0) rotateX(90deg);
+	transform:translate3d(0,-102.5%,0) rotateX(90deg);
+}
+
+.clock .flip:before {
+	opacity:0;
+	-webkit-transform:translate3d(0,102.5%,0) rotateX(-90deg);
+	-moz-transform:translate3d(0,102.5%,0) rotateX(-90deg);
+	-ms-transform:translate3d(0,102.5%,0) rotateX(-90deg);
+	transform:translate3d(0,102.5%,0) rotateX(-90deg);
+}
+
+.clock .flip:after {
+	opacity:1;
+	-webkit-transform:translate3d(0,0,0) rotateX(0);
+	-moz-transform:translate3d(0,0,0) rotateX(0);
+	-ms-transform:translate3d(0,0,0) rotateX(0);
+	transform:translate3d(0,0,0) rotateX(0);
+}
+
+
+/* FIM TESTES*/
+
+
+
+
+
+
+
+
+
+@media(max-width: 1280px) {
+    .ponto-imagem {
+        width: 250px;
+        height: 250px;
+}
+
+.ponto-imagem img {
+    width: 150px;
+    height: 150px;
+}
+
+#password-ponto {
+    width: 300px;
+    height: 50px;
+}
+
+.imgponto {
+    width: 50px;
+    height: 50px;
+}
+
+.imgponto img {
+    width: 45px;
+    height: 45px;
+    margin-top: 2px;
+}
+}
+
+
+@media(max-width: 470px) {
+    .ponto-title {
+        font-size: 20px;
+    }
+
+    .ponto-imagem {
+        width: 200px;
+        height: 200px;
+}
+
+.ponto-imagem img {
+    width: 100px;
+    height: 100px;
+}
+
+.alinhamento-bater-ponto {
+    margin-bottom: unset;
+}
+
+#password-ponto {
+    width: 200px;
+    height: 40px;
+}
+
+.imgponto {
+    width: 40px;
+    height: 40px;
+}
+
+.imgponto img {
+    width: 30px;
+    height: 30px;
+    margin-top: 2px;
+}
+
+.ponto-title {
+    font-size: 18px;
+}
+
+}
+
+.ponto-align-center {
+    width: 100%;
+}
+

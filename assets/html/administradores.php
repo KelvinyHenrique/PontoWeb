@@ -8,14 +8,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Área de Administração</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/administradores.css">
 
 </head>
 <body>
         <!-- INICIO MENU LATERAL -->
-     
-        <div class="conteiner-box-empresa-menu-lateral-alinhamento">
+
                 <div class="menulateral">
-                        <a href="admin.html">
+                        <a href="admin.php">
                             <div class="logoempresa"><img src="../imagens/icons/circular-clock.svg" alt=""></div>
                         </a>
                         <a href="funcionarios.php">
@@ -45,15 +45,14 @@
                     </div>
                         <!-- FIM MENU LATERAL -->
         
-                        <div class="conteiner-box-empresa-menu-lateral-content">
                             <div class="conteiner-box-body">
-                             <div class="navbar-white">
+                             <div class="navbar-branca">
                                <div class="conteudo-navbar-admin"> <h1>Administração</h1></div> 
-                            </div>
-                            
+</div>
+
                                 <div class="conteiner-box-administradores">
                                     <div class="content-box-shawdow">
-                                        <div class="navbar-black">
+                                        <div class="navbar-preto">
                                            <p>Contas de Administradores</p> 
                                         </div>
                                         <table class="tabela-administradores">
@@ -88,10 +87,6 @@
                                 </div>
                           
                             </div>
-                           
-                        </div>
-
-                        </div>
-                        
+                                         
 </body>
 </html>

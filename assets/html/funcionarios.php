@@ -12,10 +12,8 @@
 
 <body>
         <!-- INICIO MENU LATERAL -->
-     
-        <div class="conteiner-box-empresa-menu-lateral-alinhamento">
                 <div class="menulateral">
-                        <a href="admin.html">
+                        <a href="admin.php">
                             <div class="logoempresa"><img src="../imagens/icons/circular-clock.svg" alt=""></div>
                         </a>
                         <a href="funcionarios.php">
@@ -44,8 +42,6 @@
                         </a>
                     </div>
                         <!-- FIM MENU LATERAL -->
-    
-    <div class="bodyturnos">
         <div class="navbar-white">
         <div class="topo-funcionarios">
               
@@ -118,8 +114,6 @@ if(isset($_SESSION['admin']) && empty($_SESSION['admin']) == false){
 ?>
             </div>
         </div>
-    </div>
-    </div>
 </body>
 
 

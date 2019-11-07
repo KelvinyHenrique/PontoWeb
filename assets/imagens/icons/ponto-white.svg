@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2019 (64 Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="80mm" height="80mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 8000 8000"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:#FEFEFE;stroke-width:500;stroke-miterlimit:22.9256}
+    .str1 {stroke:#FEFEFE;stroke-width:20;stroke-miterlimit:22.9256}
+    .fil0 {fill:none}
+    .fil1 {fill:#FEFEFE}
+   ]]>
+  </style>
+ </defs>
+ <g id="Camada_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_1177615744">
+   <g>
+    <circle class="fil0 str0" cx="4014.88" cy="4243.18" r="2741.02"/>
+    <polygon class="fil1" points="5160.55,6855.68 5822.87,6473.29 6205.27,7867.65 "/>
+    <polygon class="fil1" points="2981.29,6855.68 2318.97,6473.29 1936.57,7867.65 "/>
+    <rect class="fil1" transform="matrix(-0.309278 -0.178562 -0.357118 0.618546 5796.77 1301.8)" width="880.31" height="779.53"/>
+    <rect class="fil1" transform="matrix(0.309278 -0.178562 0.357118 0.618546 2142.74 1301.8)" width="880.31" height="779.53"/>
+    <path class="fil1" d="M6647.58 1912.25l-1974.88 -1168.89c827.31,-1305.35 2767.77,-284.37 1974.88,1168.89z"/>
+    <path class="fil1" d="M1342.94 1912.92l1974.88 -1168.89c-827.31,-1305.36 -2767.77,-284.37 -1974.88,1168.89z"/>
+   </g>
+   <g>
+    <rect class="fil1 str1" x="3893.17" y="1647.21" width="238.09" height="794.74"/>
+    <rect class="fil1 str1" x="3893.17" y="6102.29" width="238.09" height="794.74"/>
+    <rect class="fil1 str1" transform="matrix(2.63981E-14 -0.996735 1.40153 3.71188E-14 1404.75 4402.09)" width="238.87" height="567.05"/>
+    <rect class="fil1 str1" transform="matrix(2.63981E-14 -0.996735 1.40153 3.71188E-14 5835.25 4402.09)" width="238.87" height="567.05"/>
+    <rect class="fil1 str1" transform="matrix(0.498368 0.863198 -1.21376 0.700764 6487.55 2713.49)" width="238.87" height="567.05"/>
+    <rect class="fil1 str1" transform="matrix(0.863198 0.498368 -0.700764 1.21376 5368.89 1691.89)" width="238.87" height="567.05"/>
+    <rect class="fil1 str1" transform="matrix(0.863198 -0.498368 0.700764 1.21376 2460.53 1841.9)" width="238.87" height="567.05"/>
+    <rect class="fil1 str1" transform="matrix(0.498368 -0.863198 1.21376 0.700764 1452.87 2949.37)" width="238.87" height="567.05"/>
+    <rect class="fil1 str1" transform="matrix(-0.498368 -0.863198 1.21376 -0.700764 1554.45 5823.32)" width="238.87" height="567.05"/>
+    <rect class="fil1 str1" transform="matrix(-0.763543 -0.640689 0.900885 -1.07363 2563.87 6818)" width="238.87" height="567.05"/>
+    <rect class="fil1 str1" transform="matrix(0.863198 -0.498368 0.700764 1.21376 4976.54 6155.75)" width="238.87" height="567.05"/>
+    <rect class="fil1 str1" transform="matrix(0.498368 -0.863198 1.21376 0.700764 5793.08 5438.12)" width="238.87" height="567.05"/>
+    <path class="fil1 str1" d="M3853.91 2617.47l14.88 0c158.98,0 289.05,130.07 289.05,289.05l0 1488.96 -303.93 0 0 -1778.01z"/>
+    <path class="fil1 str1" d="M5311.3 4395.48l0 -14.88c0,-158.97 -130.07,-289.04 -289.05,-289.04l-1168.34 0 0 303.92 1457.39 0z"/>
+    <ellipse class="fil1 str1" cx="4014.88" cy="4243.17" rx="299.98" ry="286.79"/>
+   </g>
+  </g>
+ </g>
+</svg>

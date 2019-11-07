@@ -13,17 +13,12 @@ $data = "$ano-$mes-$dia";
 
 // FIM DATA
 
-
 //PEGA HORA ATUAL
 
-$horaatual = date('h:i:s');
+$horaatual = date('H:i:s', strtotime('-1 hour'));
 $horaatual = explode(":", $horaatual);
 list($hora, $minuto, $segundos) = $horaatual;
-
 $horaatual = "$hora-$minuto-$segundos";
-echo $horaatual;
-
-
 ?>
 
 
@@ -37,68 +32,68 @@ echo $horaatual;
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body>
+<body class="background-sucesso">
 
     <div class="conteiner">
-        <div class="body-contagem-ponto">
+      
+            <div class="body-contagem-ponto">
+  <div class="box-registro-principal">
 
-
-            <div class="titulo-sucesso">
-                <h1>Você Ja registrou o ponto neste intervalo Selecionado</h1>
-            </div>
-
-            <div class="box-registro">
-                <div class="box-contagem-ponto">
-                    <div class="box-data dia">
-                        <div><?php echo $dia;?></div>
-                        <div>Dia</div>
-                    </div>
-
-                    <div class="box-data mes">
-                        <div><?php echo $mes;?></div>
-                        <div>Mês</div>
-                    </div>
-
-                    <div class="box-data ano">
-                        <div><?php echo $ano;?></div>
-                        <div>Ano</div>
-                    </div>
-
-                    <div class="box-data hora">
-                        <div><?php echo $hora;?></div>
-                        <div>Horas</div>
-                    </div>
-
-                    <div class="box-data minuto">
-                        <div><?php echo $minuto;?></div>
-                        <div>Minutos</div>
-                    </div>
+                <div class="titulo-sucesso">
+                    <h1>Você Ja registrou o ponto neste intervalo Selecionado</h1>
                 </div>
 
-                <div class="box-inferior-registro">
-                    <div>
-                       <a class="botoes voltar"  href="../../index.html">Sair</a>
-                    </div>
+                <div class="box-registro">
+                    <div class="box-contagem-ponto">
+                        <div class="box-data dia">
+                            <div><?php echo $dia;?></div>
+                            <div>Dia</div>
+                        </div>
 
-                    <div>
-                        <a class="botoes sair" href="../../index.html">Menu</a>
+                        <div class="box-data mes">
+                            <div><?php echo $mes;?></div>
+                            <div>Mês</div>
+                        </div>
+
+                        <div class="box-data ano">
+                            <div><?php echo $ano;?></div>
+                            <div>Ano</div>
+                        </div>
+
+                        <div class="box-data hora">
+                            <div><?php echo $hora;?></div>
+                            <div>Horas</div>
+                        </div>
+
+                        <div class="box-data minuto">
+                            <div><?php echo $minuto;?></div>
+                            <div>Minutos</div>
+                        </div>
+
+                        <div class="box-data minuto">
+                            <div><?php echo $segundos;?></div>
+                            <div>Segundos</div>
+                        </div>
                     </div>
                 </div>
+                <div class="box-btn-intervalos">
+                      <div class="botao-sair">
+                    <button class="btn"> <a href="ponto.html">Voltar</a></button>
+                </div>
 
+                <div class="botao-voltar">
+                    <button class="btn bg-red"> <a href="../../index.html">Sair</a></button>
+                </div>
+                </div>
             </div>
-
-
-
-
         </div>
-
-
-
     </div>
-
-
-
-
 </body>
 
+    <script>
+        setTimeout(function() {
+            window.location.href = "ponto.html";
+        }, 5000);
+    </script>
 </html>
+

@@ -14,10 +14,8 @@
 <body>
       
         <!-- INICIO MENU LATERAL -->
-     
-     <div class="conteiner-box-empresa-menu-lateral-alinhamento">
         <div class="menulateral">
-                <a href="admin.html">
+                <a href="admin.php">
                     <div class="logoempresa"><img src="../imagens/icons/circular-clock.svg" alt=""></div>
                 </a>
                 <a href="funcionarios.php">
@@ -38,7 +36,7 @@
                 <a href="cadastro.php">
                     <div class="icon-menu-bar-direita"><img src="../imagens/icons/add-user.svg" alt=""></div>
                 </a>
-                <a href="turnos.html">
+                <a href="turnos.php">
                     <div class="icon-menu-bar-direita"><img src="../imagens/icons/settings.svg" alt=""></div>
                 </a>
                 <a href="sair.php">
@@ -47,8 +45,7 @@
             </div>
                 <!-- FIM MENU LATERAL -->
 
-                <div class="conteiner-box-empresa-menu-lateral-content">
-        <div class="navbartopoint">
+                <div class="navbartopoint">
             <div>
                 <input class="inputsacoes" id="cadastrarempresa" type="submit" name="valorbotao" value="Cadastrar">
                 <input class="inputsacoes" type="submit" name="valorbotao" value="Editar">
@@ -63,6 +60,7 @@
             </form>
 
         </div>
+        
     <div class="conteiner">
         <div class="alinhamentoempresa">
             <div class="cadastroempresa alinhamentoempresa2" id="alinhamentoempresa2">
@@ -139,8 +137,6 @@
 
             </div>
         </div>
-    </div>
-    </div>
     </div>
 </body>
 <script type="text/javascript" src="../js/main.js"></script>

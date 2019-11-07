@@ -8,6 +8,7 @@
 
     @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
+
 body{
     margin: 0;
     padding: 0;
@@ -122,32 +123,59 @@ p {
 
 /* Stilo Intervalos.html */
 
-.bodyintervalos {
 
-    background-color: #052138;
+
+.box-btn-intervalos {
+    width: 100%;
+    height: 16%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.bodyintervalos {
+    background-image: url("../imagens/background-07-02.svg");
+    background-position: center center;
+  
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+  
+  /* Background image is fixed in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+  background-attachment: fixed;
+  
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover;
+  
+  /* Set a background color that will be displayed
+     while the background image is loading */
+  background-color: #464646;
 }
 
 .form-intervalos {
-    widows: 100%;
+    width: 100%;
     height: 100%;
     top:50%;
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
 .intervalo-box {
-    width: 24%;
-    height: 95%;
-    margin-right: 15px;
-    margin-left: 15px;
+    width: 30%;
+    height: 80%;
+    margin-right: 25px;
+    margin-left: 45px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    color: #ffffff;
+    color: #000000;
     font-family: 'Bahnschrift Regular';
     font-size: 40px;
     border: none;
@@ -156,41 +184,72 @@ p {
 }
 
 #entrada {
-    background-color: #E6CC9F;
+    background-color: rgb(255, 255, 255);
 }
 
 #pausa {
-    background-color: #FFB600;
+    background-color: rgb(255, 255, 255);
    
 }
 
 #retorno {
-    background-color: #AEA78E;
+    background-color: rgb(255, 255, 255);
    
 }
 
 #saida {
-    background-color: #FA2742;
+    background-color: rgb(255, 255, 255);
 }
 
-.body-intervalo {
+
+#entrada img {
+    width: 50%;
+    height: 90%;
+}
+
+#pausa img {
+    width: 50%;
+    height: 90%;
+}
+
+#retorno img {
+    width: 50%;
+    height: 90%;
+}
+
+#saida img {
+    width: 50%;
+    height: 90%;
+}
+
+
+.botao-intervalos {
     width: 100%;
-    height: 100%;
+    height: 45%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.body-intervalo {
+    width: 70%;
+    height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
+    background-color: #0000008a;
+    border-radius: 12px;
 }
 .intervalo-icon {
     width: 100%;
-    height: 35%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-.intervalo-icon img{
-    width: 100%;
-    height: 100%;
-}
-
 
 /* Body Login */
 .area{
@@ -517,16 +576,19 @@ p {
 
 /* Cadastro de Usuários */
 .box-form-01 {
-    width: 100%;
+    margin-top: 200px;
+    margin-left: 5%;
+    width: 95%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .box-11-form {
     width: 94%;
 }
+
 
 .box-cadastro {
     display: flex;
@@ -691,6 +753,92 @@ p {
 
 /* Pagina de Registro de Ponto */
 
+.background-sucesso {
+    background-image: url("../imagens/background-09-01.png");
+    background-position: center center;
+  
+    /* Background image doesn't tile */
+    background-repeat: no-repeat;
+    
+    /* Background image is fixed in the viewport so that it doesn't move when 
+       the content's height is greater than the image's height */
+    background-attachment: fixed;
+    
+    /* This is what makes the background image rescale based
+       on the container's size */
+    background-size: cover;
+    
+    /* Set a background color that will be displayed
+       while the background image is loading */
+    background-color: #464646;
+  }
+
+  .box-registro-principal {
+      width: 60%;
+      height: 50%;
+      background-color: #00000048;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+  }
+  
+  .titulo-sucesso {
+      width: 100%;
+      height: 40%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 23px; 
+       color: #ffffff;
+  }
+
+  .botao-sair {
+    width: 12%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .botao-voltar {
+    width: 12%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .botao-sair .btn a {
+                  color: #FFFFFF;
+            text-decoration: none;
+  }
+
+  .botao-voltar .btn a {
+    color: #FFFFFF;
+text-decoration: none;
+}
+
+  .botao-sair .btn{
+      background-color: #0085EB;
+            width: 120px;
+            height: 35px;
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            border: unset;
+
+  }
+
+  .botao-voltar .btn{
+    background-color: #D80032;
+          width: 120px;
+          height: 35px;
+          font-size: 15px;
+          font-family: Arial, Helvetica, sans-serif;
+          font-weight: bold;
+          border: unset;
+
+}
+
 .body-contagem-ponto {
     width: 100%;
     height: 100%;
@@ -698,34 +846,28 @@ p {
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
-    background-color: #350800;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
-.titulo-sucesso {
-    font-size: 25px;
-    color: #ffffff;
-}
-
-
 .box-contagem-ponto {
     display: flex;
+    height: 40%;
 
 }
 
 .box-data {
-    width: 234px;
-    height: 270px;
+    width: 80px;
+    height: 100px;
     background-color: #ffffff;
     margin: 10px;
     display: flex;
     flex-direction: column;
     align-items:center;
     justify-content: space-between;
-    font-size: 70px;
+    font-size: 20px;
     padding: 30px;
     font-weight: bold;
 }
@@ -917,10 +1059,12 @@ p {
 }
 
 .lista-funcionarios-conteiner {
+    margin-top: 7%;
+    margin-left: 5%;
+    width: 95%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 100%;
     flex-wrap: wrap;
     background-color: #F2F2F2;
 }
@@ -988,25 +1132,26 @@ p {
 
 /* INDEX BETA ESTILO */
 .iconindex img {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
+    color: #000000;
 }
 
 .funcionarios {
-    background-color: #179fd1;
+    background-color: #ffffff;
 }
 
 .baterponto {
-    background-color: rgb(224, 59, 79);
+    background-color: rgb(255, 255, 255);
 }
 
 .administracao {
-    background-color: rgb(226, 113, 68);
+    background-color: rgb(255, 255, 255);
 }
 
 .funcionarios, .baterponto, .administracao{
     transition: 0.3s ease-in;
-}¨
+}
 
 
 
@@ -1018,18 +1163,33 @@ p {
 }
 
 .ponto-imagem {
-    background-color: #ef4848;
-    width: 300px;
-    height: 300px;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    width: 350px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
+    color: #000000;
+    font-size: 30px;
 }
 
 .ponto-title {
     font-size: 30px;
+   
 }
+
+.ponto-title {
+     height: 120px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    color: #ffffff;
+}
+
+
 
 
 .conteiner-ponto {
@@ -1043,7 +1203,7 @@ p {
     width: 100%;
     height: 100%;
     flex-direction: column;
-    color: #FFFFFF;
+    color: rgb(0, 0, 0);
 }
 
 .alinhamento-bater-ponto {
@@ -1076,12 +1236,11 @@ p {
 }
 
 .imgponto {
-    width: 60px;
+    width: 69px;
     height: 100%;
-    padding: 0;
-    margin: 0;
-    background-color: #ef4848;
+    background-color: #3942e7;
     border: none;
+    margin-top: 1px;
 }
 
 /* PAGINA DE PERFIL */
@@ -1343,38 +1502,57 @@ p {
 
 /* Banco de Horas */
 
-.bancodehoras {
-    width: 100%;
+.infonomehoras {
+    width: 90%;
+    height: 90%;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 120px;
 }
+
 
 .divbodyhoras {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 5%;
 }
 .pesquisatopo {
     width: 100%;
     height: 80px;
-    background-color: #009DFF;
+    background-color: #949494;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    margin-bottom: 20px;
+    position: fixed;
 }
 .informacoeshoras {
     width: 100%;
-    height: 250px;
+
 }
 
 .formulariobancodehoras {
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.bancodehoras {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-    width: 94%;
+    width: 100%;
 }
 
 .box2019-pesquisa {
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 
 .infostopobar {
@@ -1481,7 +1659,7 @@ p {
     align-items: center;
     justify-content: center;
     color: #000000;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .tablehorasbody {
@@ -1499,8 +1677,9 @@ p {
 .tablehorasbody th {
      border-bottom: 2px solid rgb(0, 0, 0);
      padding-bottom: 13px;
-     padding-left: 30px;
-     padding-right: 30px;
+     padding-left: 45px;
+     padding-right: 45px;
+
 }
 
 table tr td{
@@ -1542,12 +1721,20 @@ table tr td{
 
 
 .navbartopoint {
-    width: 100%;
-    height: 70px;
+    margin-left: 5%;
+    width: 95%;
+    height: 80px;
+    background-color: rgb(69, 112, 221);
+    position: initial;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #497EFF;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .inputempresasimages {
@@ -1599,13 +1786,16 @@ table tr td{
 }
 
 .boxempresa {
-    width: 100%;
+    margin-top: 80px;
+    width: 95%;
     display: flex;
+    margin-left: 5%;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-
 }
+
+
 
 .boxlistaempresa {
     width: 400px;
@@ -1655,6 +1845,8 @@ table tr td{
 .alinhamentoempresa2 {
     display: none;
     width: 40%;
+    margin-left: 120px;
+    margin-top: 95px;
 }
 
 
@@ -1774,10 +1966,24 @@ table tr td{
 
     }
 
+    .conteudo-geral-site {
+        display: flex;
+        width: 100%;
+    }
+
+
     .menulateral {
-        background-color: #000000;
-        width: 4%;
-        height: 100%;
+    background-color: #000000;
+    height: 100%;
+    width: 5%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-top: 20px;
     }
 
     .bodyturnos {
@@ -1810,8 +2016,9 @@ table tr td{
     }
 
     .navbar-topo {
-        width: 100%;
+        width: 95%;
         height: 7%;
+        margin-left: 5%;
         background-color: #ffffff;
         display: flex;
         align-items: center;
@@ -1855,7 +2062,8 @@ table tr td{
   }
 
   .info-turnos {
-      width: 100%;
+      margin-left: 5%;
+      width: 95%;
       height: 93%;
       background-color: #DCDCDD;
       display: flex;
@@ -1915,7 +2123,7 @@ table tr td{
         width: 150px;
         height: 80px;
         position: absolute;
-        margin: 10px 10px 10px 50px;
+        margin: 10px 10px 10px 10px;
         display: none;
         transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
     }
@@ -1937,6 +2145,7 @@ table tr td{
     .box-cadastrar-turnos {
         margin-top: 25px;
         margin-left: 25px;
+        margin-left: 6%;
         width: 40%;
         height: 35%;
         position: absolute;
@@ -2053,38 +2262,114 @@ table tr td{
 
     /* NAVBARS */
 
-    .navbar-black {
+
+    .navbar-cadastro {
+        margin-left: 5%;
+        width: 95%;
+        height: 80px;
+        background-color: #b8b7b7;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        font-size: 20PX;
+        color: #FFFFFF;
+    }
+
+    .navbar-branca {
+        margin-left: 5%;
+        width: 95%;
+        height: 80px;
+        background-color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    .navbar-preto {
         width: 100%;
-        height: 7%;
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FFFFFF;
+        height: 50px;
+        font-size: 20px;
+    }
+
+
+
+    .navbar-black {
+        margin-left: 5%;
+        width: 95%;
+        height: 80px;
         background-color: #000000;
-        position: initial;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        color: #FFFFFF;
+    }
+
+    
+    .navbar-white {
+        margin-left: 5%;
+        width: 95%;
+        height: 80px;
+        background-color: #b8b7b7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    /* Administradores */ 
+
+
+    .navbar-drd {
+        width: 100%;
+        background-color: #000000;
+        height: 60px;
         color: #FFFFFF;
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-    
-    .navbar-white {
-        width: 100%;
-        height: 7%;
-        background-color: #ffffff;
-        position: initial;
+    .conteiner-box-administradores {
+        width: 95%;
+        height: 729px;
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-top: 10px;
     }
 
-    /* Administradores */ 
-
-
-    .conteiner-box-administradores {
+    .box-conteiner-box-bomer {
         width: 100%;
-        height:100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #bebebe;
+        height: 100%;
+        background-color: rgb(226, 113, 68);
     }
 
     .conteiner-box-body {
@@ -2092,8 +2377,10 @@ table tr td{
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        width: 100%;
-        height: 100%;
+        width: 95%;
+        height: 95%;
+        margin-top: 80px;
+        margin-left: 5%;
     }
 
     .content-box-shawdow {
@@ -2127,4 +2414,96 @@ table tr td{
 
     .navbar-black p {
         font-size: 20px;
+    }
+
+    .intervalo-titulo {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 20px;
+    }
+
+
+    /* RESPONSIVIDADE */ 
+
+
+/* INTERVALOS.HTML */ 
+
+@media  (max-width: 500px) {
+        .body-intervalo {
+            width: 100%;
+            height: unset;
+            /* margin-right: 15px; */
+            /* margin-left: 15px; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            color: #ffffff;
+            font-family: 'Bahnschrift Regular';
+            font-size: 40px;
+            border: none;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+    
+        .intervalo-box {
+            width: 80%;
+            height: 50%;
+            margin-bottom: 20px;
+        }
+
+        .form-intervalos {
+            width: 100%; 
+            height: 457px; 
+            top: 0; 
+            left: 0; 
+            position: absolute; 
+            transform: none; 
+        }
+
+        .intervalo-titulo {
+            font-size: 35px;
+        }
+
+        .intervalo-icon {
+            margin-top: 20px;
+            width: 40%;
+            height: 40%;
+        }
+    
+    
+    }
+
+    @media  (max-width: 1150px) and (min-width:500px) {
+        .intervalo-box {
+            width: 24%;
+            height: 80%;    
+        }
+    
+        .intervalo-icon {
+            width: 70%;
+            height: 30%;
+        }
+    }
+
+
+    @media (max-width: 1800px) {
+        .box-contagem-ponto {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+        }
+        .box-registro {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
     }

@@ -97,7 +97,32 @@ if(isset($_SESSION['ponto']) && empty($_SESSION['ponto']) == false){
     $turnosaida = date('H:i:s', strtotime('-60 minute', strtotime($turnosaida)));
     $vinte3horas = date('H:i:s', strtotime('23:00:00'));
 
-    if ($horaatual <=  $turnopausa ) {
+    //Função Que verifica o dia da semana
+
+    $meses = array (1 => "Janeiro", 2 => "Fevereiro", 3 => "Março", 4 => "Abril", 5 => "Maio", 6 => "Junho", 7 => "Julho", 8 => "Agosto", 9 => "Setembro", 10 => "Outubro", 11 => "Novembro", 12 => "Dezembro");
+$diasdasemana = array (1 => "Segunda-Feira",2 => "Terça-Feira",3 => "Quarta-Feira",4 => "Quinta-Feira",5 => "Sexta-Feira",6 => "Sábado",0 => "Domingo");
+
+$variavel = date("d/m/Y");
+$variavel = str_replace('/','-',$variavel);
+
+$hoje = getdate(strtotime($variavel));
+
+$dia = $hoje["mday"];
+$mes = $hoje["mon"];
+$nomemes = $meses[$mes];
+$ano = $hoje["year"];
+$diadasemana = $hoje["wday"];
+$nomediadasemana = $diasdasemana[$diadasemana];
+
+echo $nomediadasemana;
+
+    //FIM FUNÇÃO
+    
+
+    if ($nomediadasemana == "Sábado") {
+        echo "ENTROU AQUI NÃO KKK";
+    } else {
+        if ($horaatual <=  $turnopausa ) {
         $intervalo_selecinado = "Entrada";
     } else {
         if ($horaatual <=  $turnovolta && $horaatual > $turnoentrada) {
@@ -109,7 +134,11 @@ if(isset($_SESSION['ponto']) && empty($_SESSION['ponto']) == false){
          if ($horaatual >  $turnovolta &&  $horaatual < $vinte3horas) {
         $intervalo_selecinado = "Saida";  
     }}}}   
+    ECHO "ENTROU AQUI KK";
+    }
 
+
+    
     $id = $_SESSION['ponto'];
     // SELECIONA TODOS OS CAMPOS DA TABELA PONTO ONDE O ID É IGUAL AO ID DO USUARIO E A DATA É IGUAL A DATA ATUAL
     $sql = $pdo->prepare("SELECT * FROM ponto WHERE funcionario = :id AND data = :data");

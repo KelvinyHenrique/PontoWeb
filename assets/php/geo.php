@@ -1,35 +1,20 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Simple Map</title>
-    <meta name="viewport" content="initial-scale=1.0">
-    <meta charset="utf-8">
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="map"></div>
-    <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
-        });
-      }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCEsKbBZHO8jF_ueFus9Y_Ef00Hw8RoqU&callback=initMap"
-    async defer></script>
-  </body>
-</html>
+<?php
+
+
+$meses = array (1 => "Janeiro", 2 => "Fevereiro", 3 => "Março", 4 => "Abril", 5 => "Maio", 6 => "Junho", 7 => "Julho", 8 => "Agosto", 9 => "Setembro", 10 => "Outubro", 11 => "Novembro", 12 => "Dezembro");
+$diasdasemana = array (1 => "Segunda-Feira",2 => "Terça-Feira",3 => "Quarta-Feira",4 => "Quinta-Feira",5 => "Sexta-Feira",6 => "Sábado",0 => "Domingo");
+
+$variavel = date("d/m/Y");
+$variavel = str_replace('/','-',$variavel);
+
+$hoje = getdate(strtotime($variavel));
+
+$dia = $hoje["mday"];
+$mes = $hoje["mon"];
+$nomemes = $meses[$mes];
+$ano = $hoje["year"];
+$diadasemana = $hoje["wday"];
+$nomediadasemana = $diasdasemana[$diadasemana];
+
+echo $nomediadasemana;
+?>

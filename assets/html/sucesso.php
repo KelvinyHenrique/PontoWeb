@@ -78,7 +78,7 @@ $horaatual = "$hora-$minuto-$segundos";
                 </div>
                 <div class="box-btn-intervalos">
                       <div class="botao-sair">
-                    <button class="btn"> <a href="ponto.html">Voltar</a></button>
+                    <button class="btn"> <a href="ponto.php">Voltar</a></button>
                 </div>
 
                 <div class="botao-voltar">
@@ -91,7 +91,7 @@ $horaatual = "$hora-$minuto-$segundos";
 </body>
 <script>
         setTimeout(function() {
-            window.location.href = "ponto.html";
+            window.location.href = "ponto.php";
         }, 5000);
     </script>
 </html>

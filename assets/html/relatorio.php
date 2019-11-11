@@ -132,7 +132,6 @@ $horasTrabalhadas = $totalHora - $horaIntervalo;
 $segundosTotal = $totalSegundos - $segundosIntervalo;
 $horasextras = $horasTrabalhadas - 8;
 
- /*E para que tudo saia num formato bunitinhu...te messa função aí para converter a parada ok...*/
 ?>
        <th><?php 
        if (empty($resultadopesquisadata['Entrada']) == false && empty($resultadopesquisadata['Pausa']) == false && empty($resultadopesquisadata['Retorno']) == false && empty($resultadopesquisadata['Saida']) == false) {

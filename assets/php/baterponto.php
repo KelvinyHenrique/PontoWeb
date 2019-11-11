@@ -13,13 +13,13 @@ if(isset($_POST['senha']) && empty($_POST['senha']) == false){
 
             $sql = $sql->fetch();
             $_SESSION['ponto'] = $sql['id'];
-            header("Location: ../html/intervalos.html");
+            header("Location: ../html/intervalos.php");
     } else {
-      header("Location: ../html/ponto.html");
+      header("Location: ../html/ponto.php");
     } 
 
 } else {
- header("Location: ../html/ponto.html");
+ header("Location: ../html/ponto.php");
 }
 
 ?>

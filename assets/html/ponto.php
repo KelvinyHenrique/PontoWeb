@@ -20,7 +20,7 @@
                 <div class="ponto-title">
                     <h4>Digite sua senha:</h4>
                 </div>
-                <form action="../php/ponto.php" method="POST">
+                <form action="../html/intervalos.php" method="POST">
                     <div class="input-ponto">
                         <input type="password" id="password-ponto" name="senha">
                         <button class="imgponto" type="submit"><img src="../imagens/icons/right-arrow.svg"

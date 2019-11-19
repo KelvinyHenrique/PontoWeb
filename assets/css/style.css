@@ -397,23 +397,22 @@ p {
     justify-content: flex-start;
     border-radius: 20px;
     position: absolute;
+    flex-direction: column;
 }
 
 .login-form {
-    position: absolute;
-    width: 35%;
-    height: 80%;
-    background-color: #FFFFFF;
+    width: 100%;
+    height: 60%; 
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 50px;
-    border-radius: 20px;
 }
 
 .alinhamento-form {
-    width: 100%;
-    height: 100%;
+    width: 35%;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    height: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -492,11 +491,11 @@ p {
 }
 
 .logo-b201-login {
-    width: 85%;
-    height: 100%;
+    width: 100%;
+    height: 40%;
     display: flex;
-    justify-content: flex-end;
-    align-items: initial;
+    justify-content: center;
+    align-items: center;
 }
 
 

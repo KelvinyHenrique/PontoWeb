@@ -1,3 +1,14 @@
+<?php
+session_start();
+require '../php/config.php';
+
+if(isset($_SESSION['admin']) && empty($_SESSION['admin']) == false) {
+} else {
+  header("Location: ../../index.html");
+}
+?>
+
+
 <html>
 
 <head>

@@ -1,60 +1,103 @@
 <!DOCTYPE html>
-
-<html lang="pt-BR">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/login.css">
-    <title>Login</title>
+	<title>PontoWeb</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="../images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="../vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../css/util.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+<!--===============================================================================================-->
 </head>
-
 <body>
-    <div class="conteiner">
-        <div class="login-body area">
-            <ul class="circles">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-            <div class="box-login">
-                <div class="login-form">
-                    <form method="POST" class="alinhamento-form" action="../php/login.php">
-                        <div class="title-login">
-                            <p>Sistema de Ponto Web</p>
-                        </div>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<img src="../images/grupobarbosa.svg" alt="IMG">
+				</div>
 
-                        <div class="box-form-align-login">
-                            <div class="box-form">
-                                <input type="text" placeholder="Usuário" name="usuario">
-                            </div>
-                            <div class="box-form">
-                                <input type="password" placeholder="Senha" name="senha">
-                            </div>
-                        </div>
+				<form method="POST" class="login100-form validate-form"  action="../php/login2.php">
+					<span class="login100-form-title">
+						PontoWeb
+					</span>
 
-                        <div class="enviar-form">
-                            <input type="submit" value="LOGAR">
-                        </div>
-                    </form>
-                </div>
+					<div class="wrap-input100 validate-input" data-validate = "Usuário válido é necessário: kelviny ">
+						<input class="input100" type="text" name="usuario" placeholder="Usuário">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
 
-                <div class="logo-b201-login">
-                    <img src="../imagens/icons/b201.svg" alt="">
-                </div>
-            </div>
+					<div class="wrap-input100 validate-input" data-validate = "Senha requerida">
+						<input class="input100" type="password" name="senha" placeholder="Password">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Login
+						</button>
+					</div>
 
-        </div>
-    </div>
+					<div class="text-center p-t-12">
+						<span class="txt1">
+						Esqueceu
+						</span>
+						<a class="txt2" href="#">
+						Usuário / Senha?
+						</a>
+					</div>
+
+					<div class="text-center p-t-136">
+						<a class="txt2" href="#">
+							Crie sua conta
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+<!--===============================================================================================-->	
+	<script src="../vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../vendor/bootstrap/js/popper.js"></script>
+	<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../vendor/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="../js/main.js"></script>
+
 </body>
-
 </html>
+
+
+
+

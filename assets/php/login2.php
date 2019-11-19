@@ -17,11 +17,12 @@ if(isset($_POST['usuario']) && empty($_POST['usuario']) == false){
             $_SESSION['admin'] = $sql['id'];
             header("Location: ../html/admin.php");
     } else {
-      header("Location: ../html/login2.html");
+      header("Location: ../html/login.php");
     } 
 
 } else {
- header("Location: ../html/login2.html");
+ header("Location: ../html/login.php");
 }
-
 ?>
+
+

@@ -58,7 +58,7 @@
                 </div>
                 <div class="box-cadastro">
                     <input type="text" placeholder="Usuario" name="usuario">
-                    <input type="text" placeholder="Função" name="funcao" required>
+                      <input type="text" placeholder="Função" name="funcao" required>
                     <input type="password" placeholder="Senha" name="senha" required>
                 </div>
                 <div class="box-cadastro">

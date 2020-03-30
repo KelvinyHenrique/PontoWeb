@@ -1,5 +1,5 @@
 body {
-    background-image: url('../imagens/background-05.svg');
+    /* background-image: url('../imagens/background-05.svg'); */
     /* Background image is centered vertically and horizontally at all times */
   background-position: center center;
   
@@ -16,7 +16,7 @@ body {
   
   /* Set a background color that will be displayed
      while the background image is loading */
-  background-color: #464646;
+	 background-color:#E0E5EC;
 }
 
 

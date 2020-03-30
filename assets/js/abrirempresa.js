@@ -1,5 +1,3 @@
-document.getElementById("botaoabrir").onclick = function() {abrirrelatorioempresa()};
-
-function abrirrelatorioempresa() {
-    document.getElementById("relatoriofunc2").classList.toggle("relatoriovisivel");
-}
+$("#cadastrarempresa").click(function() {
+    $('.alinhamentoempresa2').css({"display": "flex"});
+  });

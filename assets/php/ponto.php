@@ -27,6 +27,9 @@ $data = "$ano/$mes/$dia";
 
 //PEGA HORA ATUAL
 
+
+
+
 $horaatual = date('h:i:s');
 
 if(isset($_SESSION['ponto']) && empty($_SESSION['ponto']) == false){

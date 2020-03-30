@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Área de Administração</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
 </head>
 
@@ -139,6 +140,6 @@
         </div>
     </div>
 </body>
-<script type="text/javascript" src="../js/main.js"></script>
+<script type="text/javascript" src="../js/abrirempresa.js"></script>
 
 </html>

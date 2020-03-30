@@ -572,7 +572,9 @@ p {
     font-size: 44px;
     font-family: 'Bahnschrift Regular';
     border: none;
-    box-shadow: 2px 2px 47px 14px rgba(0, 0, 0, 0.664);
+    border-radius: 15px;
+    background-color:rgb(36, 36, 37);
+    box-shadow: 9px 9px 16px rgba(0, 0, 0, 0.6), -9px -9px 16px  rgba(0, 0, 0, 0.5);
 }
 
 .icon {
@@ -591,7 +593,7 @@ p {
     height: 50%;
 }
 
-.funcionariosadmin {
+/* .funcionariosadmin {
     background-color: #005574;
 }
 
@@ -608,7 +610,8 @@ p {
 }
 
 .backup {
-    background-color: #1D6F3A;
+ background-color:#E0E5EC;
+box-shadow: 9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px  rgba(255,255,255, 0.5);
 }
 
 .cadastro {
@@ -621,7 +624,7 @@ p {
 
 .sair {
     background-color: #BC1D26;
-}
+} */
 
 
 /* Cadastro de Usuários */
@@ -1276,7 +1279,8 @@ text-decoration: none;
     height: 60px;
     font-size: 60px;
     color: #FFFFFF;
-    background-color: #0000005e;
+    background-color:#E0E5EC;
+box-shadow: 9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px  rgba(255,255,255, 0.5);
     border: none;
 }
 
@@ -1288,7 +1292,8 @@ text-decoration: none;
 .imgponto {
     width: 69px;
     height: 100%;
-    background-color: #3942e7;
+    background-color:rgb(227, 230, 233);
+    box-shadow: 9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px  rgba(255,255,255, 0.5);
     border: none;
     margin-top: 1px;
 }
@@ -1525,7 +1530,7 @@ text-decoration: none;
     justify-content: space-between
 }
 .relatoriofunc2 {
-    display: none;
+    display: block;
 }
 
 .relatoriovisivel {
